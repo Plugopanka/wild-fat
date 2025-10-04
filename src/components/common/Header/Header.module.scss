@@ -1,0 +1,139 @@
+.header {
+  max-width: 89%;
+  height: 120px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.leftLinks {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+
+  &:hover {
+    color: #796ded;
+  }
+}
+
+.logoContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.alogo {
+  height: 30px;
+  width: 30px;
+}
+
+.rightButtons {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #1a1a1a;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #ccc;
+}
+
+.button {
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  outline: none;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 30px;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #796ded;
+    color: #796ded;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.buttonText {
+  text-transform: uppercase;
+  margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .leftLinks {
+    gap: 1rem;
+  }
+
+  .rightButtons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .leftLinks {
+    display: none;
+  }
+
+  .logoContainer {
+    justify-content: flex-start;
+  }
+
+  .logo {
+    height: 2rem;
+  }
+}

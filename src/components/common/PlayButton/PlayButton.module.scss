@@ -1,0 +1,39 @@
+.playWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.playButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 32px;
+  background: #fff;
+  color: #796ded;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 250ms ease;
+  box-shadow: 0 0 24px rgba(121, 109, 237, 0.4);
+  gap: 8px;
+}
+
+.playButton:hover {
+  box-shadow: 0 0 48px rgba(121, 109, 237, 0.6);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.playButton::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url('https://cdn.prod.website-files.com/5e42aee008053d8670f84473/63224522d0f8531f47b5b895_play-button%202%20(Traced)%20(1).svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}

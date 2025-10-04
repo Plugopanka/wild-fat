@@ -1,0 +1,46 @@
+.label {
+  color: #fff;
+  text-align: center;
+  object-fit: fill;
+  background-color: #796ded;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-family: Inconsolata, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    background: linear-gradient(to right, #6e45e2 0%, #88d3ce 100%);
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.labelText {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.small {
+  padding: 8px 24px;
+  font-size: 16px;
+}

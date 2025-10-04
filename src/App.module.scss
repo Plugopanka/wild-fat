@@ -1,6 +1,15 @@
-#root {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+main {
+  min-height: calc(100vh - 194px);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #222;
+}
+
+.app {
+  padding: 0;
+  overflow: hidden;
+  background-color: #222;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
