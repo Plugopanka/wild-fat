@@ -1,6 +1,37 @@
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 
+body {
+  font-family: 'Inconsolata', monospace;
+  line-height: 1.5;
+  font-variation-settings: 'wght' 600;
+  color-scheme: light dark;
+  color: #fff;
+  background-color: #222;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+a {
+  color: #796ded;
+}
+
+a:hover {
+  color: #7569dc;
+}
+
 main {
   min-height: calc(100vh - 194px);
   display: flex;
