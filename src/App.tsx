@@ -1,11 +1,12 @@
 import {Route, Routes, Navigate} from 'react-router-dom';
 import {About, Works, WorkDetails} from './components/pages';
-import {Header, Footer} from './components/common';
+import {Header, Footer, ScrollToTop} from './components/common';
 import styles from './App.module.scss';
 
 function App() {
   return (
     <div className={styles.app}>
+      <ScrollToTop />
       <Header />
       <main>
       <Routes>

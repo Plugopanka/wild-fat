@@ -1,21 +1,36 @@
 import React from 'react';
 import WorksGrid from '../../common/WorksGrid';
 import WorkCard from '../../common/WorkCard';
-import { WORKS_CARDS } from './constants';
 import SectionTitle from '../../common/SectionTitle';
+import { useLocalization } from '../../../contexts/LocalizationContext';
 import styles from './Works.module.scss';
 import WorksHero from '../../common/WorksHero';
 
 const Works: React.FC = () => {
+  const { t } = useLocalization();
+
+  // Маппинг изображений для карточек
+  const cardImages: Record<string, string> = {
+    'Caldera': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631f972574477d53d6375cad_ScreenShot00016.png',
+    'Ground-From-Under-The-Feet': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631fa8f72fd029a03c0df386_ScreenShot00003.png',
+    'Phone-Rage': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/61e873180b37a881ff27aa2a_photo_2021-01-07_01-29-21.jpg',
+    'Helicopter-HUD': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/62292e9579912485fd76b398_Screenshot%202022-03-10%20at%2001.41%201.png',
+    'Eggs-Delivery': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ec6841f42de90df96d695e7_eggs_delivery_main_menu.jpg',
+    'Before-I-Disappear': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ec6885d2b193fd9c457bc06_Frame%2012.jpg',
+    'Darkest-Path': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ecd266bb0f99e9454cbdf57_DP.jpg',
+    'death-mortal-conference': 'https://uploads-ssl.webflow.com/5e42aee008053d8670f84473/5e42e3db7b97a9493b67ad72_Final_map_city%203.png',
+    'Dum-Spiro-Spero': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5e42e4027b97a98a7367ad8d_Final_map_city%202.png'
+  };
+
   return (
     <div className={styles.page}>
-      <SectionTitle className={styles.title}>CURRENT PROJECT</SectionTitle>
+      <SectionTitle className={styles.title}>{t.works.currentProject}</SectionTitle>
       <WorksHero src="https://cdn.prod.website-files.com/5e42aee008053d8670f84473/631fac9e7e50a7b2b5b9366f_1673765062-1_1390x600.jpg" />
 
-      <SectionTitle className={styles.title}>PERSONAL PROJECTS</SectionTitle>
+      <SectionTitle className={styles.title}>{t.works.personalProjects}</SectionTitle>
       <WorksGrid>
-        {WORKS_CARDS.map(card => (
-          <WorkCard key={card.id} id={card.id} title={card.title} image={card.image} />
+        {t.worksCards.map(card => (
+          <WorkCard key={card.id} id={card.id} title={card.title} image={cardImages[card.id]} />
         ))}
       </WorksGrid>
     </div>

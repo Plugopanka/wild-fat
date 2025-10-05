@@ -1,0 +1,272 @@
+.container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.articlesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.article {
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.articleHidden {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.articleVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideFromRight {
+  &.articleHidden {
+    transform: translateX(100px);
+  }
+  &.articleVisible {
+    transform: translateX(0);
+  }
+}
+
+.slideFromLeft {
+  &.articleHidden {
+    transform: translateX(-100px);
+  }
+  &.articleVisible {
+    transform: translateX(0);
+  }
+}
+
+.articleWithBackground {
+  background: #222;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.articleWithoutBackground {
+  background: transparent;
+  color: #000000;
+}
+
+.articleContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.gifSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.gif {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gif:hover {
+  transform: scale(1.05);
+}
+
+.emptySpace {
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.emptySpace::before {
+  content: "Нет изображения";
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.articleTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: inherit;
+}
+
+.articleText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.notFound {
+  text-align: center;
+  padding: 2rem;
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+  }
+  
+  .article {
+    padding: 1.75rem;
+  }
+  
+  .articleContent {
+    gap: 1.75rem;
+  }
+  
+  .gifSection {
+    min-height: 180px;
+  }
+  
+  .emptySpace {
+    height: 180px;
+  }
+  
+  .articleTitle {
+    font-size: 1.2rem;
+  }
+  
+  .articleText {
+    font-size: 0.95rem;
+  }
+}
+
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .container {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  
+  .articlesContainer {
+    gap: 1.5rem;
+  }
+  
+  .article {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .articleContent {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gifSection {
+    min-height: 150px;
+    order: 2;
+  }
+  
+  .textSection {
+    order: 1;
+  }
+  
+  .emptySpace {
+    height: 150px;
+  }
+  
+  .articleTitle {
+    font-size: 1.1rem;
+  }
+  
+  .articleText {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  // Анимация для мобильных устройств
+  .slideFromRight,
+  .slideFromLeft {
+    &.articleHidden {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    &.articleVisible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .container {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .article {
+    padding: 1.25rem;
+  }
+  
+  .articleContent {
+    gap: 1.25rem;
+  }
+  
+  .gifSection {
+    min-height: 120px;
+  }
+  
+  .emptySpace {
+    height: 120px;
+    font-size: 0.8rem;
+  }
+  
+  .articleTitle {
+    font-size: 1rem;
+  }
+  
+  .articleText {
+    font-size: 0.85rem;
+  }
+}
+
+// Поддержка тач-действий
+@media (hover: none) and (pointer: coarse) {
+  .gif:hover {
+    transform: none;
+  }
+  
+  .article {
+    transition: all 0.4s ease;
+  }
+  
+  // Увеличиваем области касания для лучшего UX
+  .emptySpace {
+    min-height: 44px; // Минимальный размер для тач-целей
+  }
+}

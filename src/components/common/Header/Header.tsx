@@ -2,18 +2,21 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import styles from './Header.module.scss';
 import mainLogo from '../../../assets/icons/mainLogo.svg';
-import {HEADER_LINKS} from './constants';
+import { useLocalization } from '../../../contexts/LocalizationContext';
 
 const Header: React.FC = () => {
+  const { t, currentLanguage, changeLanguage } = useLocalization();
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.leftLinks}>
-          {HEADER_LINKS.map((link, index) => (
-            <Link key={index} to={link.url} className={styles.link}>
-              {link.title}
-            </Link>
-          ))}
+          <Link to="/works" className={styles.link}>
+            {t.header.works}
+          </Link>
+          <Link to="/about" className={styles.link}>
+            {t.header.about}
+          </Link>
         </div>
 
         <div className={styles.logoContainer}>
@@ -38,8 +41,22 @@ const Header: React.FC = () => {
             download
             rel="noopener noreferrer"
           >
-            <p className={styles.buttonText}>download cv</p>
+            <p className={styles.buttonText}>{t.header.downloadCv}</p>
           </a>
+          <div className={styles.languageSwitcher}>
+            <button 
+              className={`${styles.languageButton} ${currentLanguage === 'en' ? styles.active : ''}`}
+              onClick={() => changeLanguage('en')}
+            >
+              EN
+            </button>
+            <button 
+              className={`${styles.languageButton} ${currentLanguage === 'ru' ? styles.active : ''}`}
+              onClick={() => changeLanguage('ru')}
+            >
+              RU
+            </button>
+          </div>
         </div>
       </nav>
     </header>

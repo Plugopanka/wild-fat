@@ -1,22 +1,25 @@
 .playWrapper {
   display: flex;
   justify-content: center;
+  margin: 40px;
 }
 
 .playButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
-  border-radius: 32px;
+  padding: 18px 40px;
+  border-radius: 40px;
   background: #fff;
   color: #796ded;
   text-decoration: none;
   font-weight: 700;
+  font-size: 16px;
   text-transform: uppercase;
   transition: all 250ms ease;
   box-shadow: 0 0 24px rgba(121, 109, 237, 0.4);
-  gap: 8px;
+  gap: 12px;
+  min-height: 44px; // Минимальный размер для тач-целей
 }
 
 .playButton:hover {
@@ -26,8 +29,8 @@
 
 .playButton::before {
   content: '';
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background-image: url('https://cdn.prod.website-files.com/5e42aee008053d8670f84473/63224522d0f8531f47b5b895_play-button%202%20(Traced)%20(1).svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -36,4 +39,98 @@
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
+}
+
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .playWrapper {
+    margin: 35px;
+  }
+  
+  .playButton {
+    padding: 16px 36px;
+    font-size: 15px;
+    gap: 10px;
+  }
+  
+  .playButton::before {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .playWrapper {
+    margin: 30px 20px;
+  }
+  
+  .playButton {
+    padding: 14px 32px;
+    font-size: 14px;
+    gap: 8px;
+    border-radius: 35px;
+  }
+  
+  .playButton::before {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .playWrapper {
+    margin: 25px 15px;
+  }
+  
+  .playButton {
+    padding: 12px 28px;
+    font-size: 13px;
+    gap: 6px;
+    border-radius: 30px;
+  }
+  
+  .playButton::before {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// Очень маленькие экраны (до 360px)
+@media (max-width: 360px) {
+  .playWrapper {
+    margin: 20px 10px;
+  }
+  
+  .playButton {
+    padding: 10px 24px;
+    font-size: 12px;
+    gap: 5px;
+    border-radius: 25px;
+  }
+  
+  .playButton::before {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Поддержка тач-действий
+@media (hover: none) and (pointer: coarse) {
+  .playButton:hover {
+    box-shadow: 0 0 24px rgba(121, 109, 237, 0.4);
+    animation: none;
+  }
+  
+  .playButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 32px rgba(121, 109, 237, 0.5);
+  }
+  
+  // Увеличиваем область касания
+  .playButton {
+    min-height: 48px;
+    min-width: 120px;
+  }
 }

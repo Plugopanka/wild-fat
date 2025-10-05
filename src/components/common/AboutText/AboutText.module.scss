@@ -1,0 +1,72 @@
+.aboutList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.infoText a {
+  color: #796ded;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoText a:hover {
+  color: #9b8aff;
+  text-decoration: underline;
+}
+
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .infoText {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 1.4rem;
+  }
+}
+
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .infoText {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .infoText {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+// Очень маленькие экраны (до 360px)
+@media (max-width: 360px) {
+  .infoText {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
+  }
+}
+
+// Поддержка тач-действий
+@media (hover: none) and (pointer: coarse) {
+  .infoText a:hover {
+    color: #796ded;
+    text-decoration: none;
+  }
+  
+  .infoText a:active {
+    color: #9b8aff;
+    text-decoration: underline;
+  }
+}

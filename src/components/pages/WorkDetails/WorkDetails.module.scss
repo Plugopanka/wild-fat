@@ -31,6 +31,7 @@
 .params {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .info {
@@ -50,9 +51,103 @@
   line-height: 1.6;
 }
 
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .page {
+    max-width: 95%;
+    margin: 25px auto;
+  }
+  
+  .layout {
+    gap: 20px;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+}
 
-@media (max-width: 900px) {
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .page {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 1rem;
+  }
+  
   .layout {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .media {
+    gap: 12px;
+  }
+  
+  .info {
+    gap: 12px;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .video {
+    border-radius: 4px;
+  }
+  
+  .image {
+    border-radius: 4px;
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .page {
+    margin: 15px auto;
+    padding: 0 0.75rem;
+  }
+  
+  .layout {
+    gap: 12px;
+  }
+  
+  .media {
+    gap: 10px;
+  }
+  
+  .info {
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+// Поддержка тач-действий
+@media (hover: none) and (pointer: coarse) {
+  .video {
+    // Улучшаем взаимодействие с видео на тач-устройствах
+    cursor: pointer;
+  }
+  
+  .image {
+    cursor: pointer;
   }
 }

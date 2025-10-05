@@ -12,3 +12,44 @@
   letter-spacing: 0.04em;
   margin: 24px 0 24px;
 }
+
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .page {
+    max-width: 95%;
+    margin: 25px auto;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+    margin: 20px 0 20px;
+  }
+}
+
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .page {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin: 16px 0 16px;
+    text-align: center;
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .page {
+    margin: 15px auto;
+    padding: 0 0.75rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin: 12px 0 12px;
+  }
+}
