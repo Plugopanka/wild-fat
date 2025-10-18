@@ -5,7 +5,7 @@ import SectionTitle from '../../common/SectionTitle';
 import { useLocalization } from '../../../contexts/LocalizationContext';
 import styles from './Works.module.scss';
 import WorksHero from '../../common/WorksHero/WorksHero';
-import { cardImages, videoConfig } from './constants';
+import { cardImages, projectVideos, defaultVideoConfig } from './constants';
 
 const Works: React.FC = () => {
   const { t } = useLocalization();
@@ -14,30 +14,46 @@ const Works: React.FC = () => {
     <div className={styles.page}>
       <SectionTitle className={styles.title}>{t.works.currentProjects}</SectionTitle>
       <div className={styles.currentProjectsGrid}>
-        {t.currentProjects.map((project) => (
-          <WorksHero
-            key={project.id}
-            src={project.backgroundImage}
-            alt={project.title}
-            linkTo={`/competence/${project.id}`}
-            logo={project.logo}
-            video={videoConfig}
-          />
-        ))}
+        {t.currentProjects.map((project) => {
+          const videoSrc = projectVideos[project.id] || defaultVideoConfig.src;
+          return (
+            <WorksHero
+              key={project.id}
+              src={project.backgroundImage}
+              alt={project.title}
+              linkTo={`/competence/${project.id}`}
+              logo={project.logo}
+              video={{
+                src: videoSrc,
+                autoplay: true,
+                loop: true,
+                muted: true
+              }}
+            />
+          );
+        })}
       </div>
 
       <SectionTitle className={styles.title}>{t.works.recentProjects}</SectionTitle>
       <div className={styles.recentProjectsGrid}>
-        {t.recentProjects.map((project) => (
-          <WorksHero
-            key={project.id}
-            src={project.backgroundImage}
-            alt={project.title}
-            linkTo={`/competence/${project.id}`}
-            logo={project.logo}
-            video={videoConfig}
-          />
-        ))}
+        {t.recentProjects.map((project) => {
+          const videoSrc = projectVideos[project.id] || defaultVideoConfig.src;
+          return (
+            <WorksHero
+              key={project.id}
+              src={project.backgroundImage}
+              alt={project.title}
+              linkTo={`/competence/${project.id}`}
+              logo={project.logo}
+              video={{
+                src: videoSrc,
+                autoplay: true,
+                loop: true,
+                muted: true
+              }}
+            />
+          );
+        })}
       </div>
 
       <SectionTitle className={styles.title}>{t.works.personalProjects}</SectionTitle>

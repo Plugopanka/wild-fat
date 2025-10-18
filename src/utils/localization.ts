@@ -2,7 +2,6 @@ import { Language, LocalizationTexts } from '../types';
 import cubeImage from '../assets/images/cube.jpg';
 import cubeIcon from '../assets/images/cube-icon.png';
 import heartllImage from '../assets/images/heartll.jpg';
-import heartllIcon from '../assets/images/heart-ll-icon.png'; 
 import heartImage from '../assets/images/heart.jpg';
 
 export const LOCALIZATION: Record<Language, LocalizationTexts> = {
@@ -59,7 +58,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'atomic-heart-2',
         title: 'Atomic Heart II',
         backgroundImage: heartllImage,
-        logo: heartllIcon
       }
     ],
     recentProjects: [

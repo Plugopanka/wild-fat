@@ -12,6 +12,7 @@ const WorksHero: React.FC<WorksHeroProps> = ({
   video
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { currentLanguage } = useLocalization();
   
@@ -20,13 +21,19 @@ const WorksHero: React.FC<WorksHeroProps> = ({
   useEffect(() => {
     if (videoRef.current && video) {
       if (isHovered) {
-        videoRef.current.play().catch(console.error);
+        if (isVideoLoaded) {
+          videoRef.current.play().catch(console.error);
+        }
       } else {
         videoRef.current.pause();
         videoRef.current.currentTime = 0;
       }
     }
-  }, [isHovered, video]);
+  }, [isHovered, video, isVideoLoaded]);
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
 
   const content = (
     <div 
@@ -50,6 +57,7 @@ const WorksHero: React.FC<WorksHeroProps> = ({
             muted={video.muted ?? true}
             playsInline
             preload="metadata"
+            onLoadedData={handleVideoLoaded}
           >
             <source src={video.src} type="video/mp4" />
           </video>

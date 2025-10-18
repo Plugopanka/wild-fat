@@ -39,9 +39,7 @@ const CardDetails: React.FC<CardDetailsProps> = ({ cardId }) => {
                       <iframe 
                         className={styles.gif} 
                         src={article.gif}
-                        frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
-                        style={{ width: '100%', height: '100%' }}
                         title={article.title}
                       />
                     ) : (
@@ -69,9 +67,7 @@ const CardDetails: React.FC<CardDetailsProps> = ({ cardId }) => {
                       <iframe 
                         className={styles.gif} 
                         src={article.gif}
-                        frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
-                        style={{ width: '100%', height: '100%' }}
                         title={article.title}
                       />
                     ) : (

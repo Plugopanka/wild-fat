@@ -1,6 +1,8 @@
 // Константы для страницы Works
 
-import videoSrc from '../../../assets/videos/AH1_trim.mp4';
+import cubeVideoSrc from '../../../assets/videos/cube-video.mp4';
+import heartllVideoSrc from '../../../assets/videos/heart-ll-video.mp4';
+import heartVideoSrc from '../../../assets/videos/heart-video.mp4';
 
 // Маппинг изображений для карточек
 export const cardImages: Record<string, string> = {
@@ -20,9 +22,16 @@ export const cardImages: Record<string, string> = {
   'Gameplay-Programming': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ec6841f42de90df96d695e7_eggs_delivery_main_menu.jpg'
 };
 
-// Конфигурация видео для проектов
-export const videoConfig = {
-  src: videoSrc,
+// Маппинг видео для проектов
+export const projectVideos: Record<string, string> = {
+  'the-cube': cubeVideoSrc,
+  'atomic-heart-2': heartllVideoSrc,
+  'atomic-heart': heartVideoSrc
+};
+
+// Конфигурация видео по умолчанию
+export const defaultVideoConfig = {
+  src: cubeVideoSrc, // Используем cube-video как видео по умолчанию
   autoplay: true,
   loop: true,
   muted: true
