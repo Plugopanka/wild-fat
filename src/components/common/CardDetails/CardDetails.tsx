@@ -31,29 +31,55 @@ const CardDetails: React.FC<CardDetailsProps> = ({ cardId }) => {
               } ${isEven ? styles.slideFromRight : styles.slideFromLeft}`}
             >
               <div className={styles.articleContent}>
-                {isEven ? (
-                  // Четные статьи: GIF слева, текст справа
-                  <>
-                    <div className={styles.gifSection}>
+              {isEven ? (
+                // Четные статьи: видео слева, текст справа
+                <>
+                  <div className={styles.gifSection}>
+                    {article.gif ? (
+                      <iframe 
+                        className={styles.gif} 
+                        src={article.gif}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        style={{ width: '100%', height: '100%' }}
+                        title={article.title}
+                      />
+                    ) : (
                       <div className={styles.emptySpace}></div>
-                    </div>
-                    <div className={styles.textSection}>
-                      <h4 className={styles.articleTitle}>{article.title}</h4>
-                      <p className={styles.articleText}>{article.text}</p>
-                    </div>
-                  </>
-                ) : (
-                  // Нечетные статьи: текст слева, GIF справа
-                  <>
-                    <div className={styles.textSection}>
-                      <h4 className={styles.articleTitle}>{article.title}</h4>
-                      <p className={styles.articleText}>{article.text}</p>
-                    </div>
-                    <div className={styles.gifSection}>
+                    )}
+                  </div>
+                  <div className={styles.textSection}>
+                    <h4 className={styles.articleTitle}>{article.title}</h4>
+                    {article.text.map((paragraph, idx) => (
+                      <p key={idx} className={styles.articleText}>{paragraph}</p>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                // Нечетные статьи: текст слева, видео справа
+                <>
+                  <div className={styles.textSection}>
+                    <h4 className={styles.articleTitle}>{article.title}</h4>
+                    {article.text.map((paragraph, idx) => (
+                      <p key={idx} className={styles.articleText}>{paragraph}</p>
+                    ))}
+                  </div>
+                  <div className={styles.gifSection}>
+                    {article.gif ? (
+                      <iframe 
+                        className={styles.gif} 
+                        src={article.gif}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        style={{ width: '100%', height: '100%' }}
+                        title={article.title}
+                      />
+                    ) : (
                       <div className={styles.emptySpace}></div>
-                    </div>
-                  </>
-                )}
+                    )}
+                  </div>
+                </>
+              )}
               </div>
             </div>
           );

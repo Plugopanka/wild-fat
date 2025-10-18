@@ -1,6 +1,6 @@
 .header {
-  max-width: 89%;
-  height: 120px;
+  max-width: 90%;
+  height: 110px;
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -15,7 +15,7 @@
 
 .leftLinks {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   flex: 1;
 }
 
@@ -44,13 +44,14 @@
 }
 
 .alogo {
-  height: 30px;
-  width: 30px;
+  height: 36px;
+  width: 36px;
+  transition: filter 0.3s ease;
 }
 
 .rightButtons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   flex: 1;
   justify-content: flex-end;
   align-items: center;
@@ -90,7 +91,6 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
   border-radius: 50%;
   transition: background-color 0.3s ease;
   display: flex;
@@ -108,11 +108,10 @@
 }
 
 .button {
-  background: transparent;
-  border: 1.5px solid white;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 40px;
-  color: white;
-  padding: 0 20px;
+  color: #fff;
+  padding: 6px 20px;
   font-size: 1rem;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -122,7 +121,6 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  height: 30px;
   box-sizing: border-box;
 
   &:hover {
@@ -137,26 +135,45 @@
 
 .buttonText {
   text-transform: uppercase;
-  margin: 6px 0;
+  margin: 0;
 }
 
-// Планшеты (768px - 1024px)
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1440px) and (min-width: 1025px) {  
+  .leftLinks {
+    gap: 2rem;
+  }
+  
+  .rightButtons {
+    gap: 1rem;
+  }
+
+  .alogo {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+// Планшеты (901px - 1024px)
+@media (max-width: 1024px) and (min-width: 901px) {
   .header {
-    max-width: 95%;
     height: 100px;
   }
   
   .leftLinks {
-    gap: 1.5rem;
+    gap: 0.5rem;
   }
   
   .rightButtons {
-    gap: 1.25rem;
+    gap: 0.5rem;
   }
   
   .logo {
     height: 2.25rem;
+  }
+
+  .alogo {
+    height: 16px;
+    width: 16px;
   }
   
   .button {
@@ -171,51 +188,152 @@
   }
 }
 
-// Мобильные устройства (до 768px)
-@media (max-width: 768px) {
+// Burger menu styles
+.burgerButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.burgerIcon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); // Makes the icon white
+}
+
+.burgerButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #222;
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 12px 12px;
+  padding: 1rem;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out;
+  
+  &.closing {
+    animation: slideUp 0.3s ease-in forwards;
+  }
+  
+  &.open {
+    display: block;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.mobileLink {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #796ded;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.mobileLanguageSwitcher {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobileLanguageButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &.active {
+    background: #796ded;
+    border-color: #796ded;
+    color: #fff;
+  }
+}
+
+// Мобильные устройства (до 900px)
+@media (max-width: 900px) {
   .header {
-    max-width: 100%;
     height: 80px;
-    padding: 0 1rem;
+    position: relative;
   }
   
   .nav {
     padding: 0;
+    position: relative;
   }
 
   .leftLinks {
-    gap: 1rem;
-  }
-  
-  .link {
-    font-size: 0.9rem;
+    display: none;
   }
 
   .rightButtons {
-    gap: 0.75rem;
+    display: none;
+  }
+
+  .burgerButton {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: block;
   }
   
   .logo {
     height: 2rem;
-  }
-  
-  .button {
-    padding: 0 12px;
-    font-size: 0.85rem;
-    height: 26px;
-  }
-  
-  .buttonText {
-    font-size: 0.8rem;
-  }
-  
-  .languageButton {
-    padding: 4px 8px;
-    font-size: 0.75rem;
-  }
-  
-  .languageSwitcher {
-    padding: 3px;
   }
 }
 
@@ -226,73 +344,30 @@
     padding: 0 0.75rem;
   }
   
-  .leftLinks {
-    gap: 0.75rem;
-  }
-  
-  .link {
-    font-size: 0.8rem;
-  }
-  
-  .rightButtons {
-    gap: 0.5rem;
-  }
-  
   .logo {
     height: 1.75rem;
   }
-  
-  .button {
-    padding: 0 10px;
-    font-size: 0.8rem;
-    height: 24px;
-  }
-  
-  .buttonText {
-    font-size: 0.75rem;
-  }
-  
-  .languageButton {
-    padding: 3px 6px;
-    font-size: 0.7rem;
-  }
-  
-  .languageSwitcher {
-    padding: 2px;
+
+  .burgerIcon {
+    width: 20px;
+    height: 20px;
   }
 }
 
 // Очень маленькие экраны (до 360px)
 @media (max-width: 360px) {
-  .leftLinks {
-    display: none;
-  }
-
-  .logoContainer {
-    justify-content: flex-start;
+  .header {
+    height: 60px;
+    padding: 0 0.5rem;
   }
 
   .logo {
     height: 1.5rem;
   }
-  
-  .rightButtons {
-    gap: 0.25rem;
-  }
-  
-  .button {
-    padding: 0 8px;
-    font-size: 0.75rem;
-    height: 22px;
-  }
-  
-  .buttonText {
-    font-size: 0.7rem;
-  }
-  
-  .languageButton {
-    padding: 2px 4px;
-    font-size: 0.65rem;
+
+  .burgerIcon {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -312,6 +387,19 @@
   }
   
   .iconButton:hover {
+    background-color: transparent;
+  }
+
+  .mobileLink:hover {
+    color: #fff;
+  }
+
+  .mobileLanguageButton:hover {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .burgerButton:hover {
     background-color: transparent;
   }
   
@@ -339,5 +427,24 @@
   .iconButton {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  .burgerButton {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .mobileLink {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobileLanguageButton {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

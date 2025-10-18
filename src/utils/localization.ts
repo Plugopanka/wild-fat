@@ -1,70 +1,9 @@
-export type Language = 'en' | 'ru';
-
-export interface LocalizationTexts {
-  // Header
-  header: {
-    works: string;
-    about: string;
-    downloadCv: string;
-  };
-  
-  // CardDetails
-  cardDetails: {
-    additionalMaterials: string;
-    cardNotFound: string;
-    noImage: string;
-  };
-  
-  // WorkDetails
-  workDetails: {
-    workNotFound: string;
-  };
-  
-  // About page
-  about: {
-    title: string;
-    description: string[];
-    skills: string[];
-    contactText: string;
-    contactTextEnd: string;
-  };
-  
-  // Works page
-  works: {
-    title: string;
-    currentProject: string;
-    personalProjects: string;
-  };
-  
-  // EducationList
-  education: {
-    title: string;
-    items: Array<{
-      period: string;
-      institution: string;
-      degree: string;
-    }>;
-  };
-  
-  // Works Cards
-  worksCards: Array<{
-    id: string;
-    title: string;
-    cardName: string;
-    labels: string[];
-    description: string;
-    params: string[];
-  }>;
-  
-  // Card Details
-  cardDetailsData: Array<{
-    id: string;
-    articles: Array<{
-      title: string;
-      text: string;
-    }>;
-  }>;
-}
+import { Language, LocalizationTexts } from '../types';
+import cubeImage from '../assets/images/cube.jpg';
+import cubeIcon from '../assets/images/cube-icon.png';
+import heartllImage from '../assets/images/heartll.jpg';
+import heartllIcon from '../assets/images/heart-ll-icon.png'; 
+import heartImage from '../assets/images/heart.jpg';
 
 export const LOCALIZATION: Record<Language, LocalizationTexts> = {
   en: {
@@ -105,9 +44,31 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     },
     works: {
       title: 'Works',
-      currentProject: 'CURRENT PROJECT',
-      personalProjects: 'PERSONAL PROJECTS'
+      currentProjects: 'CURRENT PROJECTS',
+      personalProjects: 'PERSONAL PROJECTS',
+      recentProjects: 'RECENT PROJECTS'
     },
+    currentProjects: [
+      {
+        id: 'the-cube',
+        title: 'The cube',
+        backgroundImage: cubeImage,
+        logo: cubeIcon
+      },
+      {
+        id: 'atomic-heart-2',
+        title: 'Atomic Heart II',
+        backgroundImage: heartllImage,
+        logo: heartllIcon
+      }
+    ],
+    recentProjects: [
+      {
+        id: 'atomic-heart',
+        title: 'Atomic Heart',
+        backgroundImage: heartImage,
+      },
+    ],
     education: {
       title: 'Education',
       items: [
@@ -197,89 +158,134 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: `Side-scroller in a post-apocalyptic setting. The game takes place on Earth after a global flood. The player faces an unknown biological threat that rapidly assimilates underwater life forms and spreads to surviving human settlements. The player must take control of a vessel equipped for underwater work. Crew members have individual sets of characteristics that allow them to operate corresponding equipment on the vessel and perform certain tasks underwater. Using the crew's skills, the player must extract required objects and resources from underwater for producing equipment and vessel upgrades.`
       }
     ],
+    competenceDetails: {
+      competenceNotFound: 'Competence not found'
+    },
+    competences: [
+      {
+        id: 'the-cube',
+        title: 'THE CUBE',
+        name: 'The Cube Project',
+        labels: ['Game Design', 'Technical Design'],
+        description: 'An innovative 3D puzzle game featuring unique cube-based mechanics. Developed using advanced game design principles and technical implementation in Unreal Engine.',
+        params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
+        backgroundImage: cubeImage
+      },
+      {
+        id: 'atomic-heart-2',
+        title: 'ATOMIC HEART II',
+        name: 'Atomic Heart II Development',
+        labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
+        description: 'Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.',
+        params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
+        backgroundImage: heartllImage
+      },
+      {
+        id: 'atomic-heart',
+        title: 'ATOMIC HEART',
+        name: 'Atomic Heart Project',
+        labels: ['Game Design', 'Technical Design', 'Level Design'],
+        description: 'Worked on the original Atomic Heart project as a Technical Game Designer. Contributed to core gameplay mechanics, level design, and technical systems implementation.',
+        params: ['Engine: Unreal Engine 4', 'Role: Technical Designer', 'Duration: 3+ years', 'Status: Released'],
+        backgroundImage: heartImage
+      },
+      {
+        id: 'Game-Design',
+        title: 'GAME DESIGN',
+        name: 'Game Design Expertise',
+        labels: ['Game Design', 'Level Design', 'Mechanics Design'],
+        description: 'Comprehensive experience in game design including mechanics design, level design, and player experience optimization. Specialized in creating engaging gameplay loops and balanced progression systems.',
+        params: ['Experience: 5+ years', 'Projects: 15+', 'Specialization: Action, Strategy, Puzzle']
+      },
+      {
+        id: 'Technical-Design',
+        title: 'TECHNICAL DESIGN',
+        name: 'Technical Game Design',
+        labels: ['Technical Design', 'Systems Design', 'Blueprint Programming'],
+        description: 'Advanced technical design skills with expertise in Unreal Engine Blueprint programming, systems design, and technical implementation of game mechanics.',
+        params: ['Engine: Unreal Engine 4/5', 'Languages: Blueprint, C++', 'Focus: Systems Architecture']
+      },
+      {
+        id: 'UI-UX-Programming',
+        title: 'UI/UX PROGRAMMING',
+        name: 'User Interface Programming',
+        labels: ['UI Programming', 'UX Design', 'Frontend Development'],
+        description: 'Specialized in creating intuitive user interfaces and user experiences. Experience with both game UI systems and web-based interfaces.',
+        params: ['Platforms: Web, Mobile, Desktop', 'Tools: Figma, Adobe XD', 'Languages: JavaScript, TypeScript']
+      },
+      {
+        id: 'Gameplay-Programming',
+        title: 'GAMEPLAY PROGRAMMING',
+        name: 'Core Gameplay Programming',
+        labels: ['Gameplay Programming', 'C++', 'Blueprint'],
+        description: 'Core gameplay programming expertise with focus on player mechanics, AI systems, and game logic implementation.',
+        params: ['Languages: C++, Blueprint', 'Focus: Player Mechanics', 'Experience: 3+ years']
+      }
+    ],
     cardDetailsData: [
       {
         id: 'Caldera',
-        articles: [
-          {
-            title: 'Strategic Planning',
-            text: 'Caldera is a strategic game where players must plan their actions several moves ahead. The game mechanics are based on resource balancing and predicting opponent actions.'
-          },
-          {
-            title: 'Gameplay Features',
-            text: 'The game features a unique territory and resource management system. Every decision affects the further development of events, creating a deep strategic experience.'
-          },
-          {
-            title: 'Technical Implementation',
-            text: 'The project was developed on Unreal Engine 4 using modern rendering technologies and performance optimization.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Ground-From-Under-The-Feet',
         articles: [
           {
-            title: 'Game Concept',
-            text: 'Ground From Under The Feet is a unique top-down shooter where the player must maintain control over platforms for as long as possible. Each platform has its own stabilizer that shows the current state.'
+            title: 'GROUND CONTROL',
+            text: [
+              `The playing area is divided into 8 parts you have to protect from falling, each of them has its own stabilizer.`,
+              `The “Evil Eye” attacks stabilizers in moments of losing an attention to the player, launching them overload. At that stage it starts to cool down itself, getting the heat to the radiator - the big circle around the stabilizer, when the radiator finally fills up, the platform begins to fall and the player has to leave the dangerous area quickly.`,
+              `To prevent the falling of the platform you have to shoot its stabilizer to cooldown, until its fade to black again.`,
+              `However, heating radiators have an additional sense. Excepting this indicates the current progress of losing the platform it also deals damage to character, when he comes too close, it helps to avoid hiding behind the stabilizer.`,
+            ],
+            gif: 'https://player.vimeo.com/video/750544281?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
-            title: 'Platform Falling Mechanics',
-            text: 'When a platform becomes overloaded, it falls. The player must delay this event as long as possible, which perfectly fits the jam theme "Delay inevitable".'
+            title: 'ENEMIES',
+            text: [
+              `“Evil Eye” - has two attack phases. On the first stage it chases the character with its laser beam. On the second one it switches to attack stabilizers.`,
+              `“Evil robots” - dozens of bad guys who chase the character to eliminate him. But they are useful at the same time, because of bringing the energy that rapidly consumes in gameplay. `,
+              `To reach the flow state, it was a couple of iterations by balancing energy consuming speed, amount of energy and HP that players can get from defeated enemies, their health and output damage.`,
+            ],
           },
           {
-            title: 'One Week Development',
-            text: 'The game was created in one week for Ludum Dare 50. This required careful planning and rapid design iteration.'
+            title: 'DASH',
+            text: [
+              `Player’s ability that allows him to avoid dangerous situations and helps to shift from falling platforms. I also spend some time implementing the nice looking effect that accompanies it.`,
+            ],
           }
         ]
       },
       {
         id: 'Phone-Rage',
-        articles: [
-          {
-            title: 'Anger Simulator Concept',
-            text: 'Phone Rage is an anger issues simulator based on human stories. The game allows players to express their emotions through destroying virtual objects.'
-          },
-          {
-            title: 'Psychological Aspect',
-            text: 'The game explores the theme of anger management in the modern world, where technology often becomes a source of stress and frustration.'
-          },
-          {
-            title: '3-Day Development',
-            text: 'The project was created in 3 days for Dani\'s Basement Jam #2, which required rapid prototyping and efficient teamwork.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Helicopter-HUD',
-        articles: [
-          {
-            title: 'AR HUD Prototype',
-            text: 'Helicopter HUD is a Head Up Display system prototype for firefighting helicopters equipped with horizontal fire extinguishing systems. The project is based on the KA-32 example.'
-          },
-          {
-            title: 'Educational Project',
-            text: 'The project was developed as part of the AR HUD course at Universal University and WayRay. The goal was to invent and demonstrate a HUD system prototype for transport.'
-          },
-          {
-            title: 'Technical Achievements',
-            text: 'Over three months, a working prototype with most of the designed mechanics was created. The project helped improve knowledge in AR Soft, Render, Shaders, UI Programming, Physics, VFX and optimization.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Eggs-Delivery',
         articles: [
           {
-            title: 'Racing Concept',
-            text: 'Eggs Delivery is a game concept developed at Ludum Dare 46 in 10 hours. The player\'s goal is to deliver the maximum number of egg boxes to the finish line within a limited time.'
+            title: 'Camera Position',
+            text: [
+              `Initially, the camera was positioned to the side of the car, which was intended to create additional difficulty when passing the track. After collecting player feedback, it became clear that completing the distance was quite difficult even without this detail. I decided to move the camera to the standard position behind the car.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Learning and Development',
-            text: 'The project\'s goal was to improve rapid prototyping skills. During development, I studied the features of Wheeled Vehicle and Spline Component.'
+            title: 'Car Stability',
+            text: [
+              `In the first version of the game, the car body was positioned on the roof of the car and exceeded it in area, which caused players to often encounter car rollovers on turns. I took this into account when creating the car model and positioned the wheels at a greater distance from each other, thus creating additional stability.`
+            ],
           },
           {
             title: 'Results',
-            text: 'The project helped improve level design skills and work in Blender, as well as gain experience in creating racing games.'
+            text: [
+              `The project helped improve level design skills and work in Blender, as well as gain experience in creating racing games.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -287,16 +293,25 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Before-I-Disappear',
         articles: [
           {
-            title: 'Invisibility Mechanics',
-            text: 'Before I Disappear is a 3D platformer where the character\'s visible shell begins to disappear as soon as he leaves the starting platform. This creates a unique gaming experience.'
+            title: 'Decreasing Visibility',
+            text: [
+              `To implement this mechanic, I wrote a material whose property dynamically changes when the timer starts. Visibility is restored at checkpoints and when picking up active game objects that are positioned to guide the player in the direction of further movement through the level, and sometimes positioned in hard-to-reach places, provoking the player to take risks.`
+            ],
           },
           {
-            title: 'Puzzles and Obstacles',
-            text: 'The player must bring the character to the next checkpoint, overcoming obstacles and solving puzzles while controlling the decreasing visibility.'
+            title: 'Doors',
+            text: [
+              `The map contains doors that can only be passed through in visible form. After passing through the doors, the character immediately loses visibility and the ability to return. These objects are used as time limiters for passing certain sections of the map.`,
+              `Also, one of the checkpoints gives a choice of path, and one of the options involves crossing such a door, behind which there is a relatively simple route that serves to teach players to control an invisible character.`
+            ],
           },
           {
-            title: 'Weekly Game Jam 146',
-            text: 'The game was developed for Weekly Game Jam 146 on the theme "Invisible". The project helped improve level design skills and visual effects creation.'
+            title: 'Auxiliary Surface',
+            text: [
+              `Testing of the first versions showed that players found it very difficult to control the character in invisible form. To fix this situation, I created a surface that, when stepped on, leaves traces and makes a different sound.`,
+              `Such surfaces serve an auxiliary function and are located in places where the player needs to control an invisible character.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -304,16 +319,22 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Darkest-Path',
         articles: [
           {
-            title: 'Dark Path',
-            text: 'Darkest Path is a game where the player\'s task is to overcome a dark path. The difficulty lies in the many obstacles and limited visibility area.'
+            title: 'Visibility Area',
+            text: [
+              `Gameplay is built on limiting map visibility. The player sees a small area in close proximity to the character. The mechanic is implemented by dynamically changing the material parameter.`
+            ],
           },
           {
-            title: 'Limited Visibility',
-            text: 'The visibility area is limited to one cell in the immediate vicinity of the character, creating an atmosphere of tension and requiring careful planning.'
+            title: 'Level Design',
+            text: [
+              `When the player gets used to the controls, the difficulty begins to increase. Along the way, there are gaps that anyone who rushes will definitely fall into. Encountering such traps forces the player to move more carefully.`
+            ],
           },
           {
-            title: 'Weekly Game Jam 144',
-            text: 'The game was developed for Weekly Game Jam 144 on the theme "In the dark". The project helped consolidate knowledge in working with materials and delve deeper into level design.'
+            title: 'Pushing Plate',
+            text: [
+              `The level contains plates that, when stepped on, give the character momentum in the direction of their movement. Since the player cannot see the landing site, this creates an exciting effect.`
+            ],
           }
         ]
       },
@@ -321,16 +342,28 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'death-mortal-conference',
         articles: [
           {
-            title: 'Endless Runner',
-            text: 'Death Mortal Conference is an Endless Runner game developed as part of an advertising campaign for Digital Marketing Conference 2019.'
+            title: 'Score Accumulation',
+            text: [
+              `Throughout the distance, badges with the DMC logo are placed, collecting which the player earns points. The logo was also developed specifically for the game.`,
+              `Badge spawning occurs randomly, often placing them in extremely hard-to-reach places, creating temptation for the player to pick them up with great risk.`
+            ],
+            gif: 'https://player.vimeo.com/video/394252045?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Marketing Campaign',
-            text: 'Due to the high difficulty of the game, each earned point was equal to one percent discount on a conference ticket, which amounted to about 300 rubles.'
+            title: 'Maintaining Player Flow State',
+            text: [
+              `Given that the gameplay is quite difficult, the ability to instantly restart was implemented to maintain the player's mood for the challenge as long as possible.`,
+              `The music doesn't stop, leaving the feeling of a continuing challenge. The malicious mockery after death is also aimed at maintaining this mood.`
+            ],
+            gif: 'https://player.vimeo.com/video/394254062?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Cybersports Tournament',
-            text: 'Thanks to the successful implementation of the project on the HTML platform, the game launched on all popular browsers. A cybersports tournament with a prize fund was held at the conference.'
+            title: 'Enemies',
+            text: [
+              `The main task of the project was to represent locally famous persons in the game in a very short time.`,
+              `And because of hard time restrictions and no one of us was familiar enough with 3D software we decided to make them as animated sprites, just with only unique face.`
+            ],
+            gif: 'https://player.vimeo.com/video/394305677?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -338,16 +371,53 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Dum-Spiro-Spero',
         articles: [
           {
-            title: 'Diploma Project',
-            text: 'Dum Spiro Spero is a side-scroller in a post-apocalyptic setting. The action takes place on Earth after a global flood, where the player faces an unknown biological threat.'
+            title: 'World Map and Location Transitions',
+            text: [
+              `Transitions between locations are carried out in the main game menu from the "map" section. Locations on the map are divided into 3 types - city, settlement and directly game location, each type has its corresponding icon.`,
+              `By clicking on the location icon, the player receives information about this place, which consists of data about possible danger in this zone, depth and presence of valuables.`,
+              `The amount of information depends on whether the player has already visited this location and what information they managed to acquire by this point in the game. For completing some additional tasks, the player receives information about locations as a reward.`
+            ],
+            gif: 'https://player.vimeo.com/video/397058315?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Underwater Work',
-            text: 'The player controls a vessel equipped for underwater work. Crew members have individual sets of characteristics for operating equipment.'
+            title: 'Sonar Operation',
+            text: [
+              `Before diving underwater, it is necessary to conduct reconnaissance of the bottom for the sought-after valuables.`,
+              `For these purposes, the vessel can be equipped with a sonar module, with which the player can get a drawing of the bottom relief, determine the depth of the object, and by improving the module, get information about the type of object.`
+            ],
+            gif: 'https://player.vimeo.com/video/392293778?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Resources and Upgrades',
-            text: 'Using the crew\'s skills, the player must extract required objects and resources from underwater for producing equipment and vessel upgrades.'
+            title: 'Item Collection and Crafting',
+            text: [
+              `Underwater there are many items of value to the player. The value of loot depends on the depth of occurrence and factors affecting the complexity of item extraction.`,
+              `From the collected material, the player can create equipment items, weapons, ammunition, perform repairs and improve the vessel. Crafting is carried out on the vessel using the workbench module.`
+            ],
+            gif: 'https://player.vimeo.com/video/392543332?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Air Tank Reserve Indication',
+            text: [
+              `Game tests showed that many players overlook the interface element informing about the character's air reserve.`,
+              `For convenience of monitoring the character's condition, I decided to equip the character's air tank with a color indicator, the color change of which will additionally inform the player about danger.`,
+              `Subsequent tests showed that this method solved the problem.`
+            ],
+            gif: 'https://player.vimeo.com/video/392541986?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Raising Sunken Objects',
+            text: [
+              `Objects underwater are divided into two categories - loot and aggregates.`,
+              `Loot is placed in the character's inventory, while aggregates must be loaded onto the vessel and delivered to the settlement to complete mission objectives or extract useful components from them for further use.`,
+              `To raise aggregates to the surface, characters must have lifting parachutes in their inventory, with which to perform the lift and load onto the vessel`
+            ],
+            gif: 'https://player.vimeo.com/video/392327021?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Trading, Team Development, Vessel Upgrades',
+            text: [
+              `While in the city between missions, the player can engage in vessel improvement and repair, trading, crew hiring and receiving new missions.`
+            ],
           }
         ]
       }
@@ -391,9 +461,31 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     },
     works: {
       title: 'Работы',
-      currentProject: 'ТЕКУЩИЙ ПРОЕКТ',
-      personalProjects: 'ЛИЧНЫЕ ПРОЕКТЫ'
+      currentProjects: 'ТЕКУЩИЕ ПРОЕКТЫ',
+      personalProjects: 'ЛИЧНЫЕ ПРОЕКТЫ',
+      recentProjects: 'ПОСЛЕДНИЕ ПРОЕКТЫ'
     },
+    currentProjects: [
+      {
+        id: 'the-cube',
+        title: 'Куб',
+        backgroundImage: cubeImage,
+        logo: cubeIcon
+      },
+      {
+        id: 'atomic-heart-2',
+        title: 'Atomic Heart II',
+        backgroundImage: 'https://cdn.prod.website-files.com/5e42aee008053d8670f84473/631fac9e7e50a7b2b5b9366f_1673765062-1_1390x600.jpg',
+        logo: 'https://cdn.prod.website-files.com/5e42aee008053d8670f84473/631fac9e7e50a7b2b5b9366f_1673765062-1_1390x600.jpg'
+      }
+    ],
+    recentProjects: [
+      {
+        id: 'atomic-heart',
+        title: 'Atomic Heart',
+        backgroundImage: 'https://cdn.prod.website-files.com/5e42aee008053d8670f84473/631fac9e7e50a7b2b5b9366f_1673765062-1_1390x600.jpg'
+      }
+    ],
     education: {
       title: 'Образование',
       items: [
@@ -483,89 +575,134 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: `Сайдскроллер в сеттинге постапокалипсиса. Действие игры происходит на Земле после глобального потопа. Игроку противостоит неизвестная биологическая угроза, стремительно ассимилирующая подводные формы жизни и распространяющаяся на сохранившиеся людские поселения. Игроку предстоит взять на себя управление судном, оборудованным для выполнения подводных работ. Члены экипажа владеют индивидуальным набором характеристик, что позволяет им управлять соответствующим оборудованием на судне и выполнять определенные задачи под водой. Используя навыки членов экипажа, игроку необходимо добыть из-под воды требуемые для заданий объекты и ресурсы для производства снаряжения и улучшений судна.`
       }
     ],
+    competenceDetails: {
+      competenceNotFound: 'Компетенция не найдена'
+    },
+    competences: [
+      {
+        id: 'the-cube',
+        title: 'THE CUBE',
+        name: 'Проект The Cube',
+        labels: ['Игровой дизайн', 'Технический дизайн', '3D разработка'],
+        description: 'Инновационная 3D головоломка с уникальными механиками на основе кубов. Разработана с использованием передовых принципов игрового дизайна и технической реализации в Unreal Engine.',
+        params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер','Длительность: 2+ года', 'Статус: В разработке'],
+        backgroundImage: cubeImage
+      },
+      {
+        id: 'atomic-heart-2',
+        title: 'ATOMIC HEART II',
+        name: 'Разработка Atomic Heart II',
+        labels: ['Технический дизайн', 'Дизайн систем', 'Программирование геймплея'],
+        description: 'Участвовал в разработке Atomic Heart II в качестве технического игрового дизайнера. Сосредоточился на игровых системах, технической реализации и оптимизации.',
+        params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер', 'Длительность: 2+ года', 'Статус: В разработке'],
+        backgroundImage: heartllImage
+      },
+      {
+        id: 'atomic-heart',
+        title: 'ATOMIC HEART',
+        name: 'Проект Atomic Heart',
+        labels: ['Игровой дизайн', 'Технический дизайн', 'Дизайн уровней'],
+        description: 'Работал над оригинальным проектом Atomic Heart в качестве технического игрового дизайнера. Внес вклад в основные игровые механики, дизайн уровней и техническую реализацию систем.',
+        params: ['Движок: Unreal Engine 4', 'Роль: Технический дизайнер', 'Длительность: 3+ года', 'Статус: Выпущена'],
+        backgroundImage: heartImage
+      },
+      {
+        id: 'Game-Design',
+        title: 'ИГРОВОЙ ДИЗАЙН',
+        name: 'Экспертиза в игровом дизайне',
+        labels: ['Игровой дизайн', 'Дизайн уровней', 'Дизайн механик'],
+        description: 'Комплексный опыт в игровом дизайне, включая дизайн механик, дизайн уровней и оптимизацию игрового опыта. Специализация на создании увлекательных игровых циклов и сбалансированных систем прогрессии.',
+        params: ['Опыт: 5+ лет', 'Проекты: 15+', 'Специализация: Экшен, Стратегия, Пазлы']
+      },
+      {
+        id: 'Technical-Design',
+        title: 'ТЕХНИЧЕСКИЙ ДИЗАЙН',
+        name: 'Технический игровой дизайн',
+        labels: ['Технический дизайн', 'Дизайн систем', 'Программирование Blueprint'],
+        description: 'Продвинутые навыки технического дизайна с экспертизой в программировании Unreal Engine Blueprint, дизайне систем и технической реализации игровых механик.',
+        params: ['Движок: Unreal Engine 4/5', 'Языки: Blueprint, C++', 'Фокус: Архитектура систем']
+      },
+      {
+        id: 'UI-UX-Programming',
+        title: 'UI/UX ПРОГРАММИРОВАНИЕ',
+        name: 'Программирование пользовательских интерфейсов',
+        labels: ['Программирование UI', 'UX дизайн', 'Frontend разработка'],
+        description: 'Специализация на создании интуитивных пользовательских интерфейсов и пользовательского опыта. Опыт работы как с игровыми UI системами, так и с веб-интерфейсами.',
+        params: ['Платформы: Веб, Мобильные, Десктоп', 'Инструменты: Figma, Adobe XD', 'Языки: JavaScript, TypeScript']
+      },
+      {
+        id: 'Gameplay-Programming',
+        title: 'ПРОГРАММИРОВАНИЕ ГЕЙМПЛЕЯ',
+        name: 'Основное программирование геймплея',
+        labels: ['Программирование геймплея', 'C++', 'Blueprint'],
+        description: 'Экспертиза в основном программировании геймплея с фокусом на механики игрока, системы ИИ и реализацию игровой логики.',
+        params: ['Языки: C++, Blueprint', 'Фокус: Механики игрока', 'Опыт: 3+ года']
+      }
+    ],
     cardDetailsData: [
       {
         id: 'Caldera',
-        articles: [
-          {
-            title: 'Strategic Planning',
-            text: 'Caldera представляет собой стратегическую игру, где игроки должны планировать свои действия на несколько ходов вперед. Механика игры основана на балансировании ресурсов и предсказании действий противника.'
-          },
-          {
-            title: 'Gameplay Features',
-            text: 'Игра отличается уникальной системой управления территориями и ресурсами. Каждое решение влияет на дальнейшее развитие событий, создавая глубокий стратегический опыт.'
-          },
-          {
-            title: 'Technical Implementation',
-            text: 'Проект разработан на Unreal Engine 4 с использованием современных технологий рендеринга и оптимизации производительности.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Ground-From-Under-The-Feet',
         articles: [
           {
-            title: 'Game Concept',
-            text: 'Ground From Under The Feet - это уникальный топ-даун шутер, где игрок должен удерживать контроль над платформами как можно дольше. Каждая платформа имеет свой стабилизатор, который показывает текущее состояние.'
+            title: 'КОНТРОЛЬ ТЕРРИТОРИИ',
+            text: [
+              `Игровая область разделена на 8 частей, которые нужно защищать от падения, каждая из них имеет свой стабилизатор.`,
+              `"Злой глаз" атакует стабилизаторы в моменты, когда теряет внимание к игроку, запуская их перегрузку. На этом этапе он начинает остывать, передавая тепло радиатору - большому кругу вокруг стабилизатора. Когда радиатор полностью заполняется, платформа начинает падать, и игроку необходимо быстро покинуть опасную зону.`,
+              `Чтобы предотвратить падение платформы, нужно стрелять по её стабилизатору для охлаждения, пока он снова не потемнеет.`,
+              `Однако нагревающиеся радиаторы имеют дополнительный смысл. Помимо того, что они показывают текущий прогресс потери платформы, они также наносят урон персонажу, когда он подходит слишком близко, это помогает избежать укрытия за стабилизатором.`,
+            ],
+            gif: 'https://player.vimeo.com/video/750544281?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
-            title: 'Platform Falling Mechanics',
-            text: 'Когда платформа перегружается, она падает. Игрок должен задержать это событие как можно дольше, что идеально соответствует теме джема "Delay inevitable".'
+            title: 'ВРАГИ',
+            text: [
+              `"Злой глаз" - имеет две фазы атаки. На первом этапе он преследует персонажа своим лазерным лучом. На втором переключается на атаку стабилизаторов.`,
+              `"Злые роботы" - десятки плохих парней, которые преследуют персонажа, чтобы уничтожить его. Но в то же время они полезны, потому что приносят энергию, которая быстро расходуется в геймплее.`,
+              `Чтобы достичь состояния потока, было проведено несколько итераций по балансировке скорости расхода энергии, количества энергии и HP, которые игроки могут получить от побеждённых врагов, их здоровья и наносимого урона.`,
+            ],
           },
           {
-            title: 'One Week Development',
-            text: 'Игра была создана за одну неделю для Ludum Dare 50. Это потребовало тщательного планирования и быстрой итерации дизайна.'
+            title: 'РЫВОК',
+            text: [
+              `Способность игрока, которая позволяет ему избегать опасных ситуаций и помогает перемещаться с падающих платформ. Я также потратил некоторое время на реализацию красивого визуального эффекта, который её сопровождает.`,
+            ],
           }
         ]
       },
       {
         id: 'Phone-Rage',
-        articles: [
-          {
-            title: 'Anger Simulator Concept',
-            text: 'Phone Rage - это симулятор проблем с гневом, основанный на человеческих историях. Игра позволяет игрокам выразить свои эмоции через разрушение виртуальных объектов.'
-          },
-          {
-            title: 'Psychological Aspect',
-            text: 'Игра исследует тему управления гневом в современном мире, где технологии часто становятся источником стресса и разочарования.'
-          },
-          {
-            title: '3-Day Development',
-            text: 'Проект был создан за 3 дня для Dani\'s Basement Jam #2, что потребовало быстрого прототипирования и эффективной работы в команде.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Helicopter-HUD',
-        articles: [
-          {
-            title: 'AR HUD Prototype',
-            text: 'Helicopter HUD - это прототип системы Head Up Display для пожарных вертолетов, оснащенных горизонтальными системами пожаротушения. Проект основан на примере KA-32.'
-          },
-          {
-            title: 'Educational Project',
-            text: 'Проект был разработан в рамках курса AR HUD в Universal University и WayRay. Целью было изобретение и демонстрация прототипа HUD системы для транспорта.'
-          },
-          {
-            title: 'Technical Achievements',
-            text: 'За три месяца был создан рабочий прототип с большинством запланированных механик. Проект помог улучшить знания в области AR Soft, Render, Shaders, UI Programming, Physics, VFX и оптимизации.'
-          }
-        ]
+        articles: []
       },
       {
         id: 'Eggs-Delivery',
         articles: [
           {
-            title: 'Racing Concept',
-            text: 'Eggs Delivery - концепт игры, разработанный на Ludum Dare 46 за 10 часов. Цель игрока - доставить максимальное количество коробок с яйцами до финиша за ограниченное время.'
+            title: 'Положение камеры',
+            text: [
+              `Изначально камера была установлена сбоку автомобиля, что по задумке создавало дополнительную сложность при прохождении трека. Собрав отзывы игроков стало понятно, что пройти дистанцию достаточно сложно и без этой детали. Я принял решение перенести камеру в стандартное положение за автомобиль.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Learning and Development',
-            text: 'Целью проекта было улучшение навыков быстрого прототипирования. За время разработки были изучены особенности работы с Wheeled Vehicle и Spline Component.'
+            title: 'Устойчивость автомобиля',
+            text: [
+              `В первой версии игры, кузов автомобиля располагался на крыше автомобиля и превосходил его по площади, из-за чего игроки часто сталкивались с опрокидыванием машины на поворотах. Я учел этот момент при создании модели автомобиля и расположил колеса большем удалении друг от друга, создав таким образом дополнительную устойчивость.`
+            ],
           },
           {
-            title: 'Results',
-            text: 'Проект помог улучшить навыки дизайна уровней и работы в Blender, а также получить опыт создания игр в жанре гонок.'
+            title: 'Результаты',
+            text: [
+              `Проект помог улучшить навыки дизайна уровней и работы в Blender, а также получить опыт создания игр в жанре гонок.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -573,16 +710,25 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Before-I-Disappear',
         articles: [
           {
-            title: 'Invisibility Mechanics',
-            text: 'Before I Disappear - 3D платформер, где видимая оболочка персонажа начинает исчезать, как только он покидает стартовую площадку. Это создает уникальный игровой опыт.'
+            title: 'Убывающая видимость',
+            text: [
+              `Для реализации этой механики я написал материал, свойство которого динамически меняется при запуске таймера. Видимость восстанавливается на чекпоинтах и при подборе активных игровых объектов, которые расположены таким образом. чтобы указывать игроку направление дальнейшего движения по уровню, а иногда расположены в труднодоступных местах, провоцируя игрока на риск.`
+            ],
           },
           {
-            title: 'Puzzles and Obstacles',
-            text: 'Игрок должен довести персонажа до следующей контрольной точки, преодолевая препятствия и решая головоломки, при этом контролируя убывающую видимость.'
+            title: 'Двери',
+            text: [
+              `На карте расположены двери, пройти через которые можно только в видимой форме. Пройдя через двери персонаж сразу теряет видимость и возможность вернуться назад. Эти объекты используются как ограничители времени прохождения некоторых участков карты.`,
+              `Также один из чекпоинтов дает выбор пути, и один из вариантов предполагает пересечение такой двери, за которой находится относительно несложный маршрут, выполняющий функцию обучения игроков управлению невидимым персонажем.`
+            ],
           },
           {
-            title: 'Weekly Game Jam 146',
-            text: 'Игра была разработана для Weekly Game Jam 146 на тему "Invisible". Проект помог улучшить навыки дизайна уровней и создания визуальных эффектов.'
+            title: 'Вспомогательная поверхность',
+            text: [
+              `Тестирование первых версий показало, что игрокам очень сложно управлять персонажем в невидимой форме. Чтобы исправить ситуацию, я создал поверхность, наступая на которую персонаж оставляет следы, и издает отличающийся звук.`,
+              `Такие поверхности выполняют вспомогательную функцию и расположены в местах, где игроку необходимо управлять невидимым персонажем.`
+            ],
+            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -590,16 +736,22 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Darkest-Path',
         articles: [
           {
-            title: 'Dark Path',
-            text: 'Darkest Path - игра, где задача игрока - преодолеть темный путь. Сложность заключается в множестве препятствий и ограниченной области видимости.'
+            title: 'Область видимости',
+            text: [
+              `Геймплей построен на ограничении видимости карты. Игрок видит небольшую область в непосредственной близости к персонажу. Механика реализована путем динамического изменения параметра материала.`
+            ],
           },
           {
-            title: 'Limited Visibility',
-            text: 'Область видимости ограничена одной клеткой в непосредственной близости от персонажа, что создает атмосферу напряженности и требует осторожного планирования.'
+            title: 'Дизайн уровня',
+            text: [
+              `Когда игрок привыкает к управлению, сложность начинает нарастать. На пути встречаются провалы, в которые обязательно угодит тот, кто будет торопиться. Встреча с такими ловушками заставляет игрока двигаться аккуратнее.`
+            ],
           },
           {
-            title: 'Weekly Game Jam 144',
-            text: 'Игра была разработана для Weekly Game Jam 144 на тему "In the dark". Проект помог закрепить знания в работе с материалами и углубиться в проектирование уровней.'
+            title: 'Толкающая плита',
+            text: [
+              `На уровне расположены плиты, наступив на которые персонажу придается импульс в направлении его движения. Так как игрок не видит место приземления это создает захватывающий эффект.`
+            ],
           }
         ]
       },
@@ -607,16 +759,28 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'death-mortal-conference',
         articles: [
           {
-            title: 'Endless Runner',
-            text: 'Death Mortal Conference - игра в жанре Endless Runner, разработанная как часть рекламной кампании к Digital Marketing Conference 2019.'
+            title: 'Накопление очков',
+            text: [
+              `На протяжении дистанции располагаются значки с логотипом DMC, собирая которые игрок зарабатывает очки. Логотип так-же был разработан специально для игры.`,
+              `Спавн значков происходит рандомно, зачастую размещая их в крайне труднодоступных местах, создавая для игрока соблазн подобрать его с большим риском.`
+            ],
+            gif: 'https://player.vimeo.com/video/394252045?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Marketing Campaign',
-            text: 'Из-за высокой сложности игры каждый заработанный балл приравнивался к одному проценту скидки на билет на конференцию, что составляло порядка 300 рублей.'
+            title: 'Поддержание состояния потока у игроков',
+            text: [
+              `Ввиду того, что геймплей достаточно сложен, была реализована возможность мгновенного рестарта, с целью как можно дольше сохранить настрой игрока на испытание.`,
+              `Музыка не прерывается, оставляя ощущение продолжающегося испытания. Злобная насмешка после смерти также нацелена на поддержание этого настроя.`
+            ],
+            gif: 'https://player.vimeo.com/video/394254062?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Cybersports Tournament',
-            text: 'Благодаря успешной реализации проекта на платформе HTML, игра запускалась на всех популярных браузерах. На конференции был проведен киберспортивный турнир с призовым фондом.'
+            title: 'Враги',
+            text: [
+              `Основной задачей проекта было представить в игре местных знаменитостей за очень короткое время.`,
+              `И из-за жестких временных ограничений и того, что никто из нас не был достаточно знаком с 3D-программным обеспечением, мы решили сделать их в виде анимированных спрайтов, только с уникальным лицом.`
+            ],
+            gif: 'https://player.vimeo.com/video/394305677?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -624,16 +788,53 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Dum-Spiro-Spero',
         articles: [
           {
-            title: 'Diploma Project',
-            text: 'Dum Spiro Spero - сайдскроллер в сеттинге постапокалипсиса. Действие происходит на Земле после глобального потопа, где игроку противостоит неизвестная биологическая угроза.'
+            title: 'Карта мира и переходы между локациями',
+            text: [
+              `Переход между локациями осуществляется в главном меню игры из раздела "карта". Локации на карте разделены на 3 типа - город, поселение и непосредственно игровая локация, каждый тип имеет соответствующую иконку.`,
+              `Кликнув на иконку локации игрок получает информацию об этом месте, которая состоит из данных о возможной опасности в этой зоне, глубине и наличии ценностей.`,
+              `Объем информации зависит от того, посещал ли уже игрок эту локацию и какими сведениями ему удалось обзавестись к данному моменту игры. За выполнение некоторых дополнительных заданий игрок получает информацию о локациях в награду.`
+            ],
+            gif: 'https://player.vimeo.com/video/397058315?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Underwater Work',
-            text: 'Игрок управляет судном, оборудованным для выполнения подводных работ. Члены экипажа владеют индивидуальным набором характеристик для управления оборудованием.'
+            title: 'Работа сонара',
+            text: [
+              `Перед спуском под воду необходимо провести разведку дна на предмет искомых ценностей.`,
+              `Для этих целей судно может быть оборудовано модулем сонар, при помощи которого игрок может получить рисунок рельефа дна, определить глубину нахождения объекта, а улучшив модуль получить информацию о типе объекта.`
+            ],
+            gif: 'https://player.vimeo.com/video/392293778?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           },
           {
-            title: 'Resources and Upgrades',
-            text: 'Используя навыки членов экипажа, игрок должен добыть из-под воды требуемые объекты и ресурсы для производства снаряжения и улучшений судна.'
+            title: 'Сбор предметов и крафт',
+            text: [
+              `Под водой находится множество представляющего ценность для игрока лута. Ценность лута зависит от глубины залегания и факторов, влияющих на сложность изъятия предмета.`,
+              `Из собранного материала игрок может создавать предметы снаряжения, вооружение, боеприпасы, производить ремонт и улучшать судно. Крафт осуществляется на судне при помощи модуля верстак.`
+            ],
+            gif: 'https://player.vimeo.com/video/392543332?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Индикация запаса воздуха на баллонах',
+            text: [
+              `Игровые тесты показали, что многие игроки упускают из виду элемент интерфейса, информирующий о запасе воздуха у персонажа.`,
+              `Для удобства контроля состояния персонажа, я решил оснастить воздушный баллон персонажа цветовой индикацией, изменение цвета которой дополнительно сообщит игроку об опасности.`,
+              `Последующие тесты показали, что этот способ решил проблему.`
+            ],
+            gif: 'https://player.vimeo.com/video/392541986?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Подъем затонувших объектов',
+            text: [
+              `Объекты под водой делятся на две категории - лут и агрегаты.`,
+              `Лут размещается в инвентаре персонажа, в то время как агрегаты необходимо погрузить на борт судна и доставить в поселение для выполнения целей задания или изъятия из них полезных компонентов для дальнейшего применения.`,
+              `Для подъема агрегатов на поверхность персонажи должны иметь в инвентаре подъемные парашюты, при помощи которых осуществить подъем и погрузить на борт`
+            ],
+            gif: 'https://player.vimeo.com/video/392327021?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
+          },
+          {
+            title: 'Торговля, развитие команды, улучшения судна',
+            text: [
+              `Находясь в городе между заданиями, игрок может заняться улучшением и ремонтом судна, торговлей, наймом экипажа и получением новых заданий.`
+            ],
           }
         ]
       }

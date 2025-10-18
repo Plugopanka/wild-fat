@@ -8,7 +8,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 40px;
+  padding: 8px 30px;
   border-radius: 40px;
   background: #fff;
   color: #796ded;
@@ -17,13 +17,13 @@
   font-size: 16px;
   text-transform: uppercase;
   transition: all 250ms ease;
-  box-shadow: 0 0 24px rgba(121, 109, 237, 0.4);
+  box-shadow: 0 0 40px rgba(122, 109, 237, 0.5);
   gap: 12px;
   min-height: 44px; // Минимальный размер для тач-целей
 }
 
 .playButton:hover {
-  box-shadow: 0 0 48px rgba(121, 109, 237, 0.6);
+  box-shadow: 0 0 50px rgba(122, 109, 237, 0.7);
   animation: pulse 1.5s ease-in-out infinite;
 }
 

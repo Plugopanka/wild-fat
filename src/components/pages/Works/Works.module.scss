@@ -13,6 +13,20 @@
   margin: 24px 0 24px;
 }
 
+.currentProjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.recentProjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
 // Планшеты (768px - 1024px)
 @media (max-width: 1024px) and (min-width: 769px) {
   .page {
@@ -24,12 +38,23 @@
     font-size: 1.75rem;
     margin: 20px 0 20px;
   }
+  
+  .currentProjectsGrid {
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+  
+  .recentProjectsGrid {
+    gap: 20px;
+    margin-bottom: 35px;
+  }
 }
 
 // Мобильные устройства (до 768px)
 @media (max-width: 768px) {
   .page {
-    max-width: 100%;
+    max-width: 90%;
+    width: 90%;
     margin: 20px auto;
     padding: 0 1rem;
   }
@@ -39,11 +64,25 @@
     margin: 16px 0 16px;
     text-align: center;
   }
+  
+  .currentProjectsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .recentProjectsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
 }
 
 // Маленькие мобильные устройства (до 480px)
 @media (max-width: 480px) {
   .page {
+    max-width: 90%;
+    width: 90%;
     margin: 15px auto;
     padding: 0 0.75rem;
   }
@@ -51,5 +90,15 @@
   .title {
     font-size: 1.25rem;
     margin: 12px 0 12px;
+  }
+  
+  .currentProjectsGrid {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .recentProjectsGrid {
+    gap: 12px;
+    margin-bottom: 25px;
   }
 }

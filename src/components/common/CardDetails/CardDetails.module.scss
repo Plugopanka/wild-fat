@@ -75,14 +75,11 @@
 
 .gif {
   max-width: 100%;
-  max-height: 300px;
+  max-height: 400px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.gif:hover {
-  transform: scale(1.05);
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 .emptySpace {
@@ -121,6 +118,11 @@
   margin: 0;
   color: inherit;
   opacity: 0.9;
+  
+  // Отступы между параграфами
+  & + & {
+    margin-top: 1rem;
+  }
 }
 
 .notFound {

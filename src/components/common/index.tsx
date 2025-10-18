@@ -8,5 +8,6 @@ import SoftwareIcons from './SoftwareIcons';
 import CardDetails from './CardDetails';
 import AboutText from './AboutText';
 import ScrollToTop from './ScrollToTop';
+import LinkedInIcon from './LinkedInIcon';
 
-export {Footer, Header, Label, LabelList, EducationList, SoftwareIcons, CardDetails, AboutText, ScrollToTop};
+export {Footer, Header, Label, LabelList, EducationList, SoftwareIcons, CardDetails, AboutText, ScrollToTop, LinkedInIcon};

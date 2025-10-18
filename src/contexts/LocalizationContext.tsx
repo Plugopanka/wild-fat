@@ -1,11 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { LOCALIZATION, getCurrentLanguage, setLanguage, type Language, type LocalizationTexts } from '../utils/localization';
-
-interface LocalizationContextType {
-  t: LocalizationTexts;
-  currentLanguage: Language;
-  changeLanguage: (language: Language) => void;
-}
+import { LOCALIZATION, getCurrentLanguage, setLanguage } from '../utils/localization';
+import { Language, LocalizationTexts, LocalizationContextType } from '../types';
 
 const LocalizationContext = createContext<LocalizationContextType | undefined>(undefined);
 

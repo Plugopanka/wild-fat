@@ -4,6 +4,7 @@ import mainPhoto from '../../../assets/images/bigMainPhoto.jpg';
 import {SoftwareIcons, EducationList, LabelList, AboutText} from '../../common';
 import { useLocalization } from '../../../contexts/LocalizationContext';
 
+
 const About: React.FC = () => {
   const { t } = useLocalization();
 

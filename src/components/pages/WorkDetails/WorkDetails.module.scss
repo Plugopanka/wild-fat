@@ -74,7 +74,8 @@
 // Мобильные устройства (до 768px)
 @media (max-width: 768px) {
   .page {
-    max-width: 100%;
+    max-width: 90%;
+    width: 90%;
     margin: 20px auto;
     padding: 0 1rem;
   }
@@ -114,6 +115,8 @@
 // Маленькие мобильные устройства (до 480px)
 @media (max-width: 480px) {
   .page {
+    max-width: 90%;
+    width: 90%;
     margin: 15px auto;
     padding: 0 0.75rem;
   }
