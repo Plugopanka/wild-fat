@@ -13,20 +13,29 @@ const WorksHero: React.FC<WorksHeroProps> = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const { currentLanguage } = useLocalization();
   
   const moreText = currentLanguage === 'en' ? 'more' : 'подробнее';
 
+  // Предзагрузка видео при монтировании компонента
   useEffect(() => {
-    if (videoRef.current && video) {
+    if (video) {
+      setShouldLoadVideo(true);
+    }
+  }, [video]);
+
+  // Управление воспроизведением видео
+  useEffect(() => {
+    if (videoRef.current && video && isVideoLoaded) {
       if (isHovered) {
-        if (isVideoLoaded) {
-          videoRef.current.play().catch(console.error);
-        }
+        videoRef.current.play().catch(console.error);
       } else {
         videoRef.current.pause();
-        videoRef.current.currentTime = 0;
+        if (videoRef.current.currentTime > 0) {
+          videoRef.current.currentTime = 0;
+        }
       }
     }
   }, [isHovered, video, isVideoLoaded]);
@@ -49,14 +58,14 @@ const WorksHero: React.FC<WorksHeroProps> = ({
           loading="lazy"
         />
         
-        {video && (
+        {video && shouldLoadVideo && (
           <video 
             ref={videoRef}
             className={styles.video}
             loop={video.loop ?? true}
             muted={video.muted ?? true}
             playsInline
-            preload="metadata"
+            preload="auto" // Изменено с metadata на auto для предзагрузки
             onLoadedData={handleVideoLoaded}
           >
             <source src={video.src} type="video/mp4" />
@@ -65,7 +74,7 @@ const WorksHero: React.FC<WorksHeroProps> = ({
         
         {logo && (
           <div className={styles.logo}>
-            <img src={logo} alt="Project logo" />
+            <img src={logo} alt="Project logo" loading="lazy" />
           </div>
         )}
         
