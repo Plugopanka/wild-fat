@@ -34,18 +34,16 @@ const CardDetails: React.FC<CardDetailsProps> = ({ cardId }) => {
               {isEven ? (
                 // Четные статьи: видео слева, текст справа
                 <>
-                  <div className={styles.gifSection}>
-                    {article.gif ? (
+                  {article.gif && (
+                    <div className={styles.gifSection}>
                       <iframe 
                         className={styles.gif} 
                         src={article.gif}
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        title={article.title}
-                      />
-                    ) : (
-                      <div className={styles.emptySpace}></div>
-                    )}
-                  </div>
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      title={article.title}
+                    />
+                    </div>
+                  )}
                   <div className={styles.textSection}>
                     <h4 className={styles.articleTitle}>{article.title}</h4>
                     {article.text.map((paragraph, idx) => (
@@ -62,18 +60,16 @@ const CardDetails: React.FC<CardDetailsProps> = ({ cardId }) => {
                       <p key={idx} className={styles.articleText}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className={styles.gifSection}>
-                    {article.gif ? (
+                  {article.gif && (
+                    <div className={styles.gifSection}>
                       <iframe 
                         className={styles.gif} 
                         src={article.gif}
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        title={article.title}
-                      />
-                    ) : (
-                      <div className={styles.emptySpace}></div>
-                    )}
-                  </div>
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      title={article.title}
+                    />
+                    </div>
+                  )}
                 </>
               )}
               </div>

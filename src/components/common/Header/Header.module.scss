@@ -215,10 +215,12 @@
   top: 100%;
   left: 0;
   right: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   background: #222;
   backdrop-filter: blur(10px);
   border-radius: 0 0 12px 12px;
-  padding: 1rem;
+  padding: 2rem;
   z-index: 1000;
   animation: slideDown 0.3s ease-out;
   
