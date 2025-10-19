@@ -151,6 +151,24 @@
   .logo {
     height: 80px;
   }
+
+  .mediaContainer {
+    &:hover {
+      .image {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .video {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  
+  .video {
+    display: none;
+  }
 }
 
 // Маленькие мобильные устройства (до 480px)
