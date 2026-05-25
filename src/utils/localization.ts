@@ -22,21 +22,23 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     about: {
       title: 'About',
       description: [
-        `I've been working in game development for the last 5 years in different roles, such as Game Designer, Technical Designer, UX Programmer, Gameplay Programmer. Currently I'm working as a Technical Game Designer at Mundfish for the Atomic Heart project.`,
-        `I also have past experience working as a UX/UI Designer, which is extremely useful in my routine job.`,
-        `My favorite instruments are Unreal Engine and Visual Studio / Rider, but I'm also familiar with other popular engines such as Unity and Godot.`,
-        `In my free time, I enjoy traveling by motorcycle, going to the gym and taking part in game jams.`
+        `Hi, I’m Artem! I’m a Game developer with over 8 years of experience. I have a strong passion for creating immersive and innovative experiences and games through the use of Unreal Engine.`,
+        `I’m currently a Technical Game Designer at Mundfish, working on The Cube and focused on Networking, GAS, Physics, Math, UX and Gameplay Systems. I've also participated in the Atomic Heart release for PC/Console platforms (Steam, PlayStation Store, Xbox).`
       ],
       skills: [
-        'Game Design',
+        'Technical Design',
+        'Systems Design',
+        'C++',
+        'Unreal Engine',
+        'GAS',
+        'AI Programming',
+        'Tech Animation',
         'UX/UI',
         'UI Programming',
-        'Technical Design',
-        'Gameplay Programming',
-        'Level Design',
-        '2D Graphics',
-        'Modeling',
-        'VFX'
+        'Physics',
+        'Math',
+        'Networking',
+        'Performance Profiling'
       ],
       contactText: 'You may email me',
       contactTextEnd: 'or contact via social network.'
