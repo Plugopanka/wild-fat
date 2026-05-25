@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           <a
             className={styles.iconButton}
             target="_blank"
-            href="https://www.linkedin.com/in/artem-vodolazhskiy-4b394174"
+            href="https://www.linkedin.com/in/artemvodolazhsky/"
           >
             <LinkedInIcon />
           </a>
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
             <a
               className={styles.mobileLink}
               target="_blank"
-              href="https://www.linkedin.com/in/artem-vodolazhskiy-4b394174"
+              href="https://www.linkedin.com/in/artemvodolazhsky/"
               onClick={toggleMenu}
             >
               LinkedIn
