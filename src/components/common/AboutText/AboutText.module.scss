@@ -5,7 +5,7 @@
 }
 
 .infoText {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -20,6 +20,14 @@
 .infoText a:hover {
   color: #9b8aff;
   text-decoration: underline;
+}
+
+@media (min-width: 2560px) {
+  .infoText {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-bottom: 1.7rem;
+  }
 }
 
 // Планшеты (768px - 1024px)
@@ -64,7 +72,7 @@
     color: #796ded;
     text-decoration: none;
   }
-  
+
   .infoText a:active {
     color: #9b8aff;
     text-decoration: underline;

@@ -11,7 +11,8 @@
 
 .aboutContainer {
   display: flex;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .aboutList {
@@ -19,17 +20,49 @@
 }
 
 .photoContainer {
-  width: 100%;
-  background-color: #e0e0e0; // Серый фон пока грузится картинка
+  flex: 1;
+  background-color: #e0e0e0;
   border-radius: 6px;
-  min-height: 300px; // Минимальная высота для резервирования пространства
-  
+  min-height: 300px;
+
   .photo {
     border-radius: 6px;
     width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
+  }
+}
+
+.textContainer {
+  flex: 2;
+}
+
+@media (min-width: 2560px) {
+  .about {
+    gap: 50px;
+  }
+
+  .photoContainer {
+    max-width: 700px;
+  }
+
+  .aboutContainer {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 2559px) and (min-width: 1440px) {
+  .about {
+    gap: 40px;
+  }
+
+  .photoContainer {
+    max-width: 500px;
+  }
+
+  .aboutContainer {
+    gap: 40px;
   }
 }
 
@@ -40,9 +73,13 @@
     margin: 25px auto;
     gap: 25px;
   }
-  
+
   .aboutContainer {
-    gap: 18px;
+    gap: 20px;
+  }
+
+  .photoContainer {
+    min-width: 300px;
   }
 }
 
@@ -55,15 +92,15 @@
     padding: 0 1rem;
     gap: 20px;
   }
-  
+
   .aboutContainer {
     flex-direction: column;
     gap: 16px;
   }
-  
+
   .photoContainer {
     order: 1;
-    
+
     .photo {
       border-radius: 4px;
     }
@@ -79,11 +116,11 @@
     padding: 0 0.75rem;
     gap: 16px;
   }
-  
+
   .aboutContainer {
     gap: 12px;
   }
-  
+
   .photoContainer {
     .photo {
       border-radius: 3px;

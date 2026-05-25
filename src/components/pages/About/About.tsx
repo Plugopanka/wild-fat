@@ -15,7 +15,9 @@ const About: React.FC = () => {
         <img className={styles.photo} src={mainPhoto} alt="Artem Photo" />
         </div>
 
-        <AboutText />
+        <div className={styles.textContainer}>
+          <AboutText />
+        </div>
       </section>
       <LabelList>{t.about.skills}</LabelList>
       <SoftwareIcons />

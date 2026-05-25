@@ -6,7 +6,7 @@ import SectionTitle from '../SectionTitle';
 const SoftwareIcons: React.FC = () => {
   return (
     <div className={styles.softwareWrapper}>
-      <SectionTitle className={styles.sectionTitle}>SOFTWARE</SectionTitle>
+      <SectionTitle>SOFTWARE</SectionTitle>
       <div className={styles.iconsRow}>
         {SOFTWARE_ICONS.map((icon, idx) => (
           <img
