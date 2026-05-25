@@ -4,3 +4,22 @@
   margin-bottom: 18px;
   text-align: left;
 }
+
+.educationList {
+  font-size: 19px;
+  line-height: 40px;
+}
+
+.educationList :global(ul) {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.educationList :global(li) {
+  font-size: 19px;
+  line-height: 40px;
+}
+
+.educationList :global(a) {
+  font-size: 19px;
+}

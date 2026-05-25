@@ -8,7 +8,7 @@ const EducationList: React.FC = () => {
   const { t } = useLocalization();
 
   return (
-    <div>
+    <div className={styles.educationList}>
       <SectionTitle className={styles.sectionTitle}>{t.education.title.toUpperCase()}</SectionTitle>
       <div dangerouslySetInnerHTML={{ __html: EDUCATION_SKILLS_LIST }} />
     </div>
