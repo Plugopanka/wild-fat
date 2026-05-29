@@ -97,7 +97,7 @@ export interface LocalizationTexts {
     title: string;
     name: string;
     labels: string[];
-    description: string;
+    description: string[];
     params: string[];
     backgroundImage?: string;
     youtubeUrl?: string;

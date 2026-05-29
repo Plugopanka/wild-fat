@@ -97,7 +97,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Ground-From-Under-The-Feet',
         title: 'TOP DOWN SHOOTER',
         cardName: 'Ground From Under The Feet',
-        labels: ['2D Graphics', 'Level Design', 'Modeling', 'Game Design', 'Programming', 'UX/UI'],
+        labels: ['Game Design', 'Programming', 'Level Design', 'Modeling', '2D Graphics', 'UX/UI'],
         params: ['Engine: UE4', 'Platform: PC, Windows', 'Crew: 1', 'Genre: Top Down Shooter'],
         description: `The game has been developed by myself for Ludum Dare 50 "Delay inevitable" theme for one week. The player's goal is to hold control of the playable area as long as possible. The arena consists of 8 separated platforms, each platform has its own stabilizer which indicates the current state of the platform, when it is overloaded, the platform falls. In the end each platform will fall, and the player has to delay this event. It fits the Jam theme  "Delay inevitable".`
       },
@@ -129,7 +129,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Before-I-Disappear',
         title: '3D PLATFORMER',
         cardName: 'Before I Disappear',
-        labels: ['Level Design', 'Modeling', 'Game Design', 'Programming', 'VFX'],
+        labels: ['Game Design', 'Programming', 'Level Design', 'Modeling', 'VFX'],
         params: ['Engine: UE4', 'Platform: HTML', 'Crew: 1', 'Genre: 3D Platformer'],
         description: `The game was developed by me for Weekly Game Jam 146 - theme "Invisible". The player controls a character whose visible shell begins to disappear as soon as he leaves the starting platform. The player must bring the character to the next checkpoint, overcoming obstacles and solving puzzles. The player's task is complicated by the character's decreasing visibility over time, forcing him to move faster. When visibility is completely lost, the player can still control the character, but control becomes significantly more difficult. During the project, I improved my level design skills and visual effects creation skills.`
       },
@@ -137,7 +137,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Darkest-Path',
         title: '3D PLATFORMER',
         cardName: 'Darkest Path',
-        labels: ['Level Design', 'Game Design', 'Programming', 'VFX'],
+        labels: ['Game Design', 'Programming', 'Level Design', 'VFX'],
         params: ['Engine: UE4', 'Platform: HTML', 'Crew: 1', 'Genre: 3D Platformer'],
         description: `The game was developed by me for Weekly Game Jam 144 - theme "In the dark". The player's task is to overcome the dark path. The difficulty lies in the many obstacles and limited visibility area. During development, I consolidated my knowledge of working with materials and delved deeper into level design and difficulty balance.`
       },
@@ -153,7 +153,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Dum-Spiro-Spero',
         title: 'DIPLOMA PROJECT',
         cardName: 'Dum Spiro Spero',
-        labels: ['2D Graphics', 'Modeling', 'Game Design', 'Programming', 'UX/UI', 'VFX'],
+        labels: ['Game Design', 'Programming', '2D Graphics', 'Modeling', 'UX/UI', 'VFX'],
         params: ['Engine: UE4', 'Platform: PC, Windows', 'Crew: 3', 'Genre: Sedescroller'],
         description: `Side-scroller in a post-apocalyptic setting. The game takes place on Earth after a global flood. The player faces an unknown biological threat that rapidly assimilates underwater life forms and spreads to surviving human settlements. The player must take control of a vessel equipped for underwater work. Crew members have individual sets of characteristics that allow them to operate corresponding equipment on the vessel and perform certain tasks underwater. Using the crew's skills, the player must extract required objects and resources from underwater for producing equipment and vessel upgrades.`
       }
@@ -166,9 +166,19 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'the-cube',
         title: 'THE CUBE',
         name: 'The Cube Project',
-        labels: ['Game Design', 'Technical Design'],
-        description: 'An innovative 3D puzzle game featuring unique cube-based mechanics. Developed using advanced game design principles and technical implementation in Unreal Engine.',
-        params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
+        labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
+        description: [
+          `Selected systems I designed and implemented:`,
+          `Vehicle System`,
+          `Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction.`,
+          `Full pipeline from design to implementation.`,
+          `Pet Character`,
+          `Procedural locomotion built from scratch, combat ability set on GAS, puzzle interaction, entity hooks.`,
+          `Shooting Range`,
+          `Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`,
+          `Full materials available during interview call under NDA.'`
+          ],
+        params: ['Engine: Unreal Engine 5', 'Role: Senior Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
         backgroundImage: cubeImage,
         youtubeUrl: 'https://www.youtube.com/embed/YHHJM-KZfss'
       },
@@ -177,8 +187,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         title: 'ATOMIC HEART II',
         name: 'Atomic Heart II Development',
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
-        description: 'Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.',
-        params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
+        description: ['Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.'],
+        params: ['Engine: Unreal Engine 5', 'Role: Senior Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
         backgroundImage: heartllImage,
         youtubeUrl: 'https://www.youtube.com/embed/_umhjUoglxc'
       },
@@ -186,43 +196,18 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'atomic-heart',
         title: 'ATOMIC HEART',
         name: 'Atomic Heart Project',
-        labels: ['Game Design', 'Technical Design', 'Level Design'],
-        description: 'Worked on the original Atomic Heart project as a Technical Game Designer. Contributed to core gameplay mechanics, level design, and technical systems implementation.',
-        params: ['Engine: Unreal Engine 4', 'Role: Technical Designer', 'Duration: 3+ years', 'Status: Released'],
+        labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
+        description: [
+          `Shipped on PC, PS4/5 and Xbox in February 2023.`,
+          `My work covered the weapon progression pipeline end to end:`,
+          `crafting system for weapons and consumables, upgrade system with runtime stat and attachment slot modification. Both data-driven, both hooked into save.`,
+          `Player-facing systems included the HUD, reading live from gameplay data with no polling, and a full Inventory with grid placement, 3D item inspection and cross-container transfers.`,
+          `Also designed and coded the Skill Progression system, with a custom in-editor tool so designers could build skill graphs and set unlock conditions without touching code.`,
+          `On the platform side, I implemented Enhanced Input across the full game UI for all three platforms. One abstraction layer, runtime device switching, full rebinding support. Dynamic input prompts in the HUD and control hints across all UI windows all fed from the same system.`,
+          `Screenshots and gameplay footage are publicly available on Steam and the official Mundfish channels.`],
+        params: ['Engine: Unreal Engine 4', 'Role: Senior Technical Designer', 'Duration: 3+ years', 'Status: Released'],
         backgroundImage: heartImage,
         youtubeUrl: 'https://www.youtube.com/embed/VbIc2_FwReE'
-      },
-      {
-        id: 'Game-Design',
-        title: 'GAME DESIGN',
-        name: 'Game Design Expertise',
-        labels: ['Game Design', 'Level Design', 'Mechanics Design'],
-        description: 'Comprehensive experience in game design including mechanics design, level design, and player experience optimization. Specialized in creating engaging gameplay loops and balanced progression systems.',
-        params: ['Experience: 5+ years', 'Projects: 15+', 'Specialization: Action, Strategy, Puzzle']
-      },
-      {
-        id: 'Technical-Design',
-        title: 'TECHNICAL DESIGN',
-        name: 'Technical Game Design',
-        labels: ['Technical Design', 'Systems Design', 'Blueprint Programming'],
-        description: 'Advanced technical design skills with expertise in Unreal Engine Blueprint programming, systems design, and technical implementation of game mechanics.',
-        params: ['Engine: Unreal Engine 4/5', 'Languages: Blueprint, C++', 'Focus: Systems Architecture']
-      },
-      {
-        id: 'UI-UX-Programming',
-        title: 'UI/UX PROGRAMMING',
-        name: 'User Interface Programming',
-        labels: ['UI Programming', 'UX Design', 'Frontend Development'],
-        description: 'Specialized in creating intuitive user interfaces and user experiences. Experience with both game UI systems and web-based interfaces.',
-        params: ['Platforms: Web, Mobile, Desktop', 'Tools: Figma, Adobe XD', 'Languages: JavaScript, TypeScript']
-      },
-      {
-        id: 'Gameplay-Programming',
-        title: 'GAMEPLAY PROGRAMMING',
-        name: 'Core Gameplay Programming',
-        labels: ['Gameplay Programming', 'C++', 'Blueprint'],
-        description: 'Core gameplay programming expertise with focus on player mechanics, AI systems, and game logic implementation.',
-        params: ['Languages: C++, Blueprint', 'Focus: Player Mechanics', 'Experience: 3+ years']
       }
     ],
     cardDetailsData: [
@@ -587,7 +572,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         title: 'THE CUBE',
         name: 'Проект The Cube',
         labels: ['Игровой дизайн', 'Технический дизайн', '3D разработка'],
-        description: 'Инновационная 3D головоломка с уникальными механиками на основе кубов. Разработана с использованием передовых принципов игрового дизайна и технической реализации в Unreal Engine.',
+        description: ['Инновационная 3D головоломка с уникальными механиками на основе кубов. Разработана с использованием передовых принципов игрового дизайна и технической реализации в Unreal Engine.'],
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер','Длительность: 2+ года', 'Статус: В разработке'],
         backgroundImage: cubeImage,
         youtubeUrl: 'https://www.youtube.com/embed/YHHJM-KZfss'
@@ -597,7 +582,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         title: 'ATOMIC HEART II',
         name: 'Разработка Atomic Heart II',
         labels: ['Технический дизайн', 'Дизайн систем', 'Программирование геймплея'],
-        description: 'Участвовал в разработке Atomic Heart II в качестве технического игрового дизайнера. Сосредоточился на игровых системах, технической реализации и оптимизации.',
+        description: ['Участвовал в разработке Atomic Heart II в качестве технического игрового дизайнера. Сосредоточился на игровых системах, технической реализации и оптимизации.'],
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер', 'Длительность: 2+ года', 'Статус: В разработке'],
         backgroundImage: heartllImage,
         youtubeUrl: 'https://www.youtube.com/embed/_umhjUoglxc'
@@ -607,42 +592,10 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         title: 'ATOMIC HEART',
         name: 'Проект Atomic Heart',
         labels: ['Игровой дизайн', 'Технический дизайн', 'Дизайн уровней'],
-        description: 'Работал над оригинальным проектом Atomic Heart в качестве технического игрового дизайнера. Внес вклад в основные игровые механики, дизайн уровней и техническую реализацию систем.',
+        description: ['Работал над оригинальным проектом Atomic Heart в качестве технического игрового дизайнера. Внес вклад в основные игровые механики, дизайн уровней и техническую реализацию систем.'],
         params: ['Движок: Unreal Engine 4', 'Роль: Технический дизайнер', 'Длительность: 3+ года', 'Статус: Выпущена'],
         backgroundImage: heartImage,
         youtubeUrl: 'https://www.youtube.com/embed/VbIc2_FwReE'
-      },
-      {
-        id: 'Game-Design',
-        title: 'ИГРОВОЙ ДИЗАЙН',
-        name: 'Экспертиза в игровом дизайне',
-        labels: ['Игровой дизайн', 'Дизайн уровней', 'Дизайн механик'],
-        description: 'Комплексный опыт в игровом дизайне, включая дизайн механик, дизайн уровней и оптимизацию игрового опыта. Специализация на создании увлекательных игровых циклов и сбалансированных систем прогрессии.',
-        params: ['Опыт: 5+ лет', 'Проекты: 15+', 'Специализация: Экшен, Стратегия, Пазлы']
-      },
-      {
-        id: 'Technical-Design',
-        title: 'ТЕХНИЧЕСКИЙ ДИЗАЙН',
-        name: 'Технический игровой дизайн',
-        labels: ['Технический дизайн', 'Дизайн систем', 'Программирование Blueprint'],
-        description: 'Продвинутые навыки технического дизайна с экспертизой в программировании Unreal Engine Blueprint, дизайне систем и технической реализации игровых механик.',
-        params: ['Движок: Unreal Engine 4/5', 'Языки: Blueprint, C++', 'Фокус: Архитектура систем']
-      },
-      {
-        id: 'UI-UX-Programming',
-        title: 'UI/UX ПРОГРАММИРОВАНИЕ',
-        name: 'Программирование пользовательских интерфейсов',
-        labels: ['Программирование UI', 'UX дизайн', 'Frontend разработка'],
-        description: 'Специализация на создании интуитивных пользовательских интерфейсов и пользовательского опыта. Опыт работы как с игровыми UI системами, так и с веб-интерфейсами.',
-        params: ['Платформы: Веб, Мобильные, Десктоп', 'Инструменты: Figma, Adobe XD', 'Языки: JavaScript, TypeScript']
-      },
-      {
-        id: 'Gameplay-Programming',
-        title: 'ПРОГРАММИРОВАНИЕ ГЕЙМПЛЕЯ',
-        name: 'Основное программирование геймплея',
-        labels: ['Программирование геймплея', 'C++', 'Blueprint'],
-        description: 'Экспертиза в основном программировании геймплея с фокусом на механики игрока, системы ИИ и реализацию игровой логики.',
-        params: ['Языки: C++, Blueprint', 'Фокус: Механики игрока', 'Опыт: 3+ года']
       }
     ],
     cardDetailsData: [
