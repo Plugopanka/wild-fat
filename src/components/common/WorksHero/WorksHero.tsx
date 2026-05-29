@@ -26,6 +26,14 @@ const WorksHero: React.FC<WorksHeroProps> = ({
     }
   }, [video]);
 
+  // Устанавливаем высокий приоритет загрузки видео через DOM-атрибут,
+  // чтобы избежать проблем с типизацией @types/react 18.2 (fetchPriority отсутствует в JSX-типах)
+  useEffect(() => {
+    if (videoRef.current && shouldLoadVideo) {
+      videoRef.current.setAttribute('fetchpriority', 'high');
+    }
+  }, [shouldLoadVideo]);
+
   // Управление воспроизведением видео
   useEffect(() => {
     if (videoRef.current && video && isVideoLoaded) {
