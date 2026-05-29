@@ -91,7 +91,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         cardName: 'Caldera',
         labels: ['Game Design', 'Programming', 'UX/UI'],
         params: ['Engine: UE4', 'Platform: PC, Windows', 'Crew: 2', 'Genre: Strategy'],
-        description: 'GMTK Jam 2022'
+        description: `Your goal is to collect enough resources to leave the Caldera. Your people are ready to work hard to reach this goal, all you need is to provide them appropriate opportunities to do this! But there aren't only your people who want the resources, so you need to defend them as well. You have access to some types of buildings which will help you to accomplish the goal, you can build the sawmill to harvest wood and quarry to harvest stone, also you can build defense towers to protect your people, but the building you gonna create depends on lucky dice throw.`
       },
       {
         id: 'Ground-From-Under-The-Feet',
@@ -170,7 +170,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'An innovative 3D puzzle game featuring unique cube-based mechanics. Developed using advanced game design principles and technical implementation in Unreal Engine.',
         params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
         backgroundImage: cubeImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=YHHJM-KZfss'
+        youtubeUrl: 'https://www.youtube.com/embed/YHHJM-KZfss'
       },
       {
         id: 'atomic-heart-2',
@@ -180,7 +180,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.',
         params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
         backgroundImage: heartllImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=_umhjUoglxc'
+        youtubeUrl: 'https://www.youtube.com/embed/_umhjUoglxc'
       },
       {
         id: 'atomic-heart',
@@ -190,7 +190,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'Worked on the original Atomic Heart project as a Technical Game Designer. Contributed to core gameplay mechanics, level design, and technical systems implementation.',
         params: ['Engine: Unreal Engine 4', 'Role: Technical Designer', 'Duration: 3+ years', 'Status: Released'],
         backgroundImage: heartImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=VbIc2_FwReE'
+        youtubeUrl: 'https://www.youtube.com/embed/VbIc2_FwReE'
       },
       {
         id: 'Game-Design',
@@ -590,7 +590,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'Инновационная 3D головоломка с уникальными механиками на основе кубов. Разработана с использованием передовых принципов игрового дизайна и технической реализации в Unreal Engine.',
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер','Длительность: 2+ года', 'Статус: В разработке'],
         backgroundImage: cubeImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=YHHJM-KZfss'
+        youtubeUrl: 'https://www.youtube.com/embed/YHHJM-KZfss'
       },
       {
         id: 'atomic-heart-2',
@@ -600,7 +600,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'Участвовал в разработке Atomic Heart II в качестве технического игрового дизайнера. Сосредоточился на игровых системах, технической реализации и оптимизации.',
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер', 'Длительность: 2+ года', 'Статус: В разработке'],
         backgroundImage: heartllImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=_umhjUoglxc'
+        youtubeUrl: 'https://www.youtube.com/embed/_umhjUoglxc'
       },
       {
         id: 'atomic-heart',
@@ -610,7 +610,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: 'Работал над оригинальным проектом Atomic Heart в качестве технического игрового дизайнера. Внес вклад в основные игровые механики, дизайн уровней и техническую реализацию систем.',
         params: ['Движок: Unreal Engine 4', 'Роль: Технический дизайнер', 'Длительность: 3+ года', 'Статус: Выпущена'],
         backgroundImage: heartImage,
-        youtubeUrl: 'https://www.youtube.com/watch?v=VbIc2_FwReE'
+        youtubeUrl: 'https://www.youtube.com/embed/VbIc2_FwReE'
       },
       {
         id: 'Game-Design',

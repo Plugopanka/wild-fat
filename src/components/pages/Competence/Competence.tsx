@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import LabelList from '../../common/LabelList';
-import YouTubePlayer from '../../common/YouTubePlayer';
 import { useLocalization } from '../../../contexts/LocalizationContext';
 import styles from './Competence.module.scss';
 
@@ -18,13 +17,17 @@ const Competence: React.FC = () => {
       <div className={styles.layout}>
         <div className={styles.media}>
           {competence.youtubeUrl ? (
-            <YouTubePlayer
-              youtubeUrl={competence.youtubeUrl}
-              title={competence.name || competence.title}
-              backgroundImage={competence.backgroundImage}
+            <iframe
+              className={styles.video}
+              src={competence.youtubeUrl}
+              title={competence.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
           ) : (
-            <img className={styles.image} src={competence.backgroundImage} alt={competence.title} />
+            competence.backgroundImage && (
+              <img className={styles.image} src={competence.backgroundImage} alt={competence.title} />
+            )
           )}
           
           {competence.params && (
