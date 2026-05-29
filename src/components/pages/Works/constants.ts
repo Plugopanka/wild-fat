@@ -1,7 +1,7 @@
 // Константы для страницы Works
 
-import cubeVideoSrc from '../../../assets/videos/cube-video.mp4';
-import heartllVideoSrc from '../../../assets/videos/heart-ll-video.mp4';
+import cubeVideoSrc from '../../../assets/videos/cube.mp4';
+import heartllVideoSrc from '../../../assets/videos/ah2.mp4';
 import heartVideoSrc from '../../../assets/videos/heart-video.mp4';
 
 // Маппинг изображений для карточек
