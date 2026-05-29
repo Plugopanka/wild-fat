@@ -25,7 +25,7 @@ const WorkDetails: React.FC = () => {
 
   const videoUrls: Record<string, string> = {
     'Ground-From-Under-The-Feet': 'https://player.vimeo.com/video/749764372?title=0&byline=0&portrait=0',
-    'Phone-Rage': 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    'Phone-Rage': 'https://player.vimeo.com/video/687133982?title=0&byline=0&portrait=0',
     'Helicopter-HUD': 'https://player.vimeo.com/video/686860777?title=0&byline=0&portrait=0',
     'Eggs-Delivery': 'https://player.vimeo.com/video/421536617?title=0&byline=0&portrait=0',
     'Before-I-Disappear': 'https://player.vimeo.com/video/422828622?title=0&byline=0&portrait=0',

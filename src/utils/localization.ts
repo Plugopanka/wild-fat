@@ -121,7 +121,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'Eggs-Delivery',
         title: 'RACING',
         cardName: 'Eggs Delivery',
-        labels: ['Level Design', 'Modeling', 'Game Design', 'Programming', 'UX/UI'],
+        labels: ['Game Design', 'Programming', 'Level Design', 'Modeling', 'UX/UI'],
         params: ['Engine: UE4', 'Platform: HTML', 'Crew: 1', 'Genre: Racing'],
         description: `Game concept developed by me at Ludum Dare 46 - Take It Alive in 10 hours. The player's goal is to deliver the maximum number of egg boxes to the finish line within a limited time. The project's goal was to improve rapid prototyping skills. During development, I studied the features of Wheeled Vehicle and Spline Component. I also improved my level design skills and work in Blender.`
       },
@@ -145,7 +145,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'death-mortal-conference',
         title: 'ENDLESS RUNNER',
         cardName: 'Death Mortal Conference',
-        labels: ['2D Graphics', '2D Animation', 'Level Design', 'Modeling', 'Game Design', 'Programming', 'UX/UI'],
+        labels: ['Game Design', 'Programming', 'Level Design', 'Modeling', 'UX/UI', '2D Graphics', '2D Animation'],
         params: ['Engine: UE4', 'Platform: HTML', 'Crew: 4', 'Genre: Endless runner'],
         description: 'Endless Runner game. Developed as part of an advertising campaign for Digital Marketing Conference 2019. Due to the high difficulty of the game, each earned point was equal to one percent discount on a conference ticket, which amounted to about 300 rubles, considering the ticket price. Thanks to the successful implementation of the project on the HTML platform, the game launched on all popular browsers. A cybersports tournament with a prize fund was held at the conference.'
       },
@@ -169,7 +169,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Game Design', 'Technical Design'],
         description: 'An innovative 3D puzzle game featuring unique cube-based mechanics. Developed using advanced game design principles and technical implementation in Unreal Engine.',
         params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
-        backgroundImage: cubeImage
+        backgroundImage: cubeImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=YHHJM-KZfss'
       },
       {
         id: 'atomic-heart-2',
@@ -178,7 +179,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: 'Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.',
         params: ['Engine: Unreal Engine 5', 'Role: Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
-        backgroundImage: heartllImage
+        backgroundImage: heartllImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=_umhjUoglxc'
       },
       {
         id: 'atomic-heart',
@@ -187,7 +189,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Game Design', 'Technical Design', 'Level Design'],
         description: 'Worked on the original Atomic Heart project as a Technical Game Designer. Contributed to core gameplay mechanics, level design, and technical systems implementation.',
         params: ['Engine: Unreal Engine 4', 'Role: Technical Designer', 'Duration: 3+ years', 'Status: Released'],
-        backgroundImage: heartImage
+        backgroundImage: heartImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=VbIc2_FwReE'
       },
       {
         id: 'Game-Design',
@@ -586,7 +589,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Игровой дизайн', 'Технический дизайн', '3D разработка'],
         description: 'Инновационная 3D головоломка с уникальными механиками на основе кубов. Разработана с использованием передовых принципов игрового дизайна и технической реализации в Unreal Engine.',
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер','Длительность: 2+ года', 'Статус: В разработке'],
-        backgroundImage: cubeImage
+        backgroundImage: cubeImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=YHHJM-KZfss'
       },
       {
         id: 'atomic-heart-2',
@@ -595,7 +599,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Технический дизайн', 'Дизайн систем', 'Программирование геймплея'],
         description: 'Участвовал в разработке Atomic Heart II в качестве технического игрового дизайнера. Сосредоточился на игровых системах, технической реализации и оптимизации.',
         params: ['Движок: Unreal Engine 5', 'Роль: Технический дизайнер', 'Длительность: 2+ года', 'Статус: В разработке'],
-        backgroundImage: heartllImage
+        backgroundImage: heartllImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=_umhjUoglxc'
       },
       {
         id: 'atomic-heart',
@@ -604,7 +609,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Игровой дизайн', 'Технический дизайн', 'Дизайн уровней'],
         description: 'Работал над оригинальным проектом Atomic Heart в качестве технического игрового дизайнера. Внес вклад в основные игровые механики, дизайн уровней и техническую реализацию систем.',
         params: ['Движок: Unreal Engine 4', 'Роль: Технический дизайнер', 'Длительность: 3+ года', 'Статус: Выпущена'],
-        backgroundImage: heartImage
+        backgroundImage: heartImage,
+        youtubeUrl: 'https://www.youtube.com/watch?v=VbIc2_FwReE'
       },
       {
         id: 'Game-Design',

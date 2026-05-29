@@ -100,6 +100,7 @@ export interface LocalizationTexts {
     description: string;
     params: string[];
     backgroundImage?: string;
+    youtubeUrl?: string;
   }>;
 }
 
