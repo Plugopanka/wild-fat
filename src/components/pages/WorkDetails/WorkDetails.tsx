@@ -4,25 +4,13 @@ import LabelList from '../../common/LabelList';
 import PlayButton from '../../common/PlayButton';
 import CardDetails from '../../common/CardDetails';
 import { useLocalization } from '../../../contexts/LocalizationContext';
+import { cardImages } from '../Works/constants';
 import styles from './WorkDetails.module.scss';
 
 const WorkDetails: React.FC = () => {
   const { id } = useParams();
   const { t } = useLocalization();
   
-  // Маппинг изображений и дополнительных данных
-  const cardImages: Record<string, string> = {
-    'Caldera': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631f972574477d53d6375cad_ScreenShot00016.png',
-    'Ground-From-Under-The-Feet': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631fa8f72fd029a03c0df386_ScreenShot00003.png',
-    'Phone-Rage': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/61e873180b37a881ff27aa2a_photo_2021-01-07_01-29-21.jpg',
-    'Helicopter-HUD': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/62292e9579912485fd76b398_Screenshot%202022-03-10%20at%2001.41%201.png',
-    'Eggs-Delivery': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ec6841f42de90df96d695e7_eggs_delivery_main_menu.jpg',
-    'Before-I-Disappear': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ec6885d2b193fd9c457bc06_Frame%2012.jpg',
-    'Darkest-Path': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5ecd266bb0f99e9454cbdf57_DP.jpg',
-    'death-mortal-conference': 'https://uploads-ssl.webflow.com/5e42aee008053d8670f84473/5e42e3db7b97a9493b67ad72_Final_map_city%203.png',
-    'Dum-Spiro-Spero': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/5e42e4027b97a98a7367ad8d_Final_map_city%202.png'
-  };
-
   const videoUrls: Record<string, string> = {
     'Ground-From-Under-The-Feet': 'https://player.vimeo.com/video/749764372?title=0&byline=0&portrait=0',
     'Phone-Rage': 'https://player.vimeo.com/video/687133982?title=0&byline=0&portrait=0',
@@ -35,6 +23,7 @@ const WorkDetails: React.FC = () => {
   };
 
   const gameUrls: Record<string, string> = {
+    'Dark-Delivery': 'https://untero.itch.io/dark-delivery',
     'Caldera': 'https://wild-fat.itch.io/caldera',
     'Ground-From-Under-The-Feet': 'https://ldjam.com/events/ludum-dare/50/fallen-platforms-but-not-today',
     'Phone-Rage': 'https://wild-fat.itch.io/phone-rage',

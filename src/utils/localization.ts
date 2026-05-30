@@ -86,11 +86,19 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     },
     worksCards: [
       {
+        id: 'Dark-Delivery',
+        title: 'DELIVERY SIMULATOR',
+        cardName: 'Dark-Delivery',
+        labels: ['Game Design', 'Programming', 'UX/UI'],
+        params: ['Engine: UE5', 'Platform: PC, Windows', 'Crew: 2', 'Genre: Racing'],
+        description: `Black market delivery simulator set in lovecraftian fantasy world.`
+      },
+      {
         id: 'Caldera',
         title: 'STRATEGY',
         cardName: 'Caldera',
         labels: ['Game Design', 'Programming', 'UX/UI'],
-        params: ['Engine: UE4', 'Platform: PC, Windows', 'Crew: 2', 'Genre: Strategy'],
+        params: ['Engine: UE5', 'Platform: PC, Windows', 'Crew: 2', 'Genre: Strategy'],
         description: `Your goal is to collect enough resources to leave the Caldera. Your people are ready to work hard to reach this goal, all you need is to provide them appropriate opportunities to do this! But there aren't only your people who want the resources, so you need to defend them as well. You have access to some types of buildings which will help you to accomplish the goal, you can build the sawmill to harvest wood and quarry to harvest stone, also you can build defense towers to protect your people, but the building you gonna create depends on lucky dice throw.`
       },
       {
@@ -176,7 +184,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
           `Procedural locomotion built from scratch, combat ability set on GAS, puzzle interaction, entity hooks.`,
           `Shooting Range`,
           `Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`,
-          `Full materials available during interview call under NDA.'`
+          `Full materials available during interview call under NDA.`
           ],
         params: ['Engine: Unreal Engine 5', 'Role: Senior Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
         backgroundImage: cubeImage,
