@@ -42,7 +42,11 @@ const Competence: React.FC = () => {
         <div className={styles.info}>
           <h1 className={styles.title}>{competence.name || competence.title}</h1>
           {competence.labels && <LabelList size="small">{competence.labels}</LabelList>}
-          {competence.description && <p className={styles.description}>{competence.description}</p>}
+          <ul className={styles.params}>
+            {competence.description && competence.description.map(item => (
+              <li key={item} className={styles.description}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

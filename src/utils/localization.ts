@@ -88,7 +88,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       {
         id: 'Dark-Delivery',
         title: 'DELIVERY SIMULATOR',
-        cardName: 'Dark-Delivery',
+        cardName: 'Dark Delivery',
         labels: ['Game Design', 'Programming', 'UX/UI'],
         params: ['Engine: UE5', 'Platform: PC, Windows', 'Crew: 2', 'Genre: Racing'],
         description: `Black market delivery simulator set in lovecraftian fantasy world.`
@@ -219,6 +219,10 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       }
     ],
     cardDetailsData: [
+      {
+        id: 'Dark-Delivery',
+        articles: []
+      },
       {
         id: 'Caldera',
         articles: []
