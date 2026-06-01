@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './WorksHero.module.scss';
 import { WorksHeroProps } from './types';
-import { useLocalization } from '../../../contexts/LocalizationContext';
 
 const WorksHero: React.FC<WorksHeroProps> = ({ 
   src, 
@@ -15,9 +14,6 @@ const WorksHero: React.FC<WorksHeroProps> = ({
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const { currentLanguage } = useLocalization();
-  
-  const moreText = currentLanguage === 'en' ? 'more' : 'подробнее';
 
   // Предзагрузка видео при монтировании компонента
   useEffect(() => {
@@ -87,7 +83,7 @@ const WorksHero: React.FC<WorksHeroProps> = ({
         )}
         
         <div className={styles.moreText}>
-          {moreText}
+          more
         </div>
       </div>
     </div>

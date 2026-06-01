@@ -8,7 +8,7 @@ import menuIcon from '../../../assets/icons/menu.svg';
 import { useLocalization } from '../../../contexts/LocalizationContext';
 
 const Header: React.FC = () => {
-  const { t, currentLanguage, changeLanguage } = useLocalization();
+  const { t } = useLocalization();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -56,20 +56,6 @@ const Header: React.FC = () => {
           >
             <p className={styles.buttonText}>{t.header.downloadCv}</p>
           </a>
-          <div className={styles.languageSwitcher}>
-            <button 
-              className={`${styles.languageButton} ${currentLanguage === 'en' ? styles.active : ''}`}
-              onClick={() => changeLanguage('en')}
-            >
-              EN
-            </button>
-            <button 
-              className={`${styles.languageButton} ${currentLanguage === 'ru' ? styles.active : ''}`}
-              onClick={() => changeLanguage('ru')}
-            >
-              RU
-            </button>
-          </div>
         </div>
 
         {/* Burger menu button for mobile */}
@@ -103,26 +89,6 @@ const Header: React.FC = () => {
             >
               {t.header.downloadCv}
             </a>
-            <div className={styles.mobileLanguageSwitcher}>
-              <button 
-                className={`${styles.mobileLanguageButton} ${currentLanguage === 'en' ? styles.active : ''}`}
-                onClick={() => {
-                  changeLanguage('en');
-                  toggleMenu();
-                }}
-              >
-                EN
-              </button>
-              <button 
-                className={`${styles.mobileLanguageButton} ${currentLanguage === 'ru' ? styles.active : ''}`}
-                onClick={() => {
-                  changeLanguage('ru');
-                  toggleMenu();
-                }}
-              >
-                RU
-              </button>
-            </div>
           </div>
         )}
       </nav>
