@@ -9,12 +9,11 @@ interface PlayButtonProps {
 const PlayButton: React.FC<PlayButtonProps> = ({ className, gameUrl }) => {
   return (
     <div className={`${styles.playWrapper} ${className || ''}`}>
-      <a 
-        className={styles.playButton} 
-        href={gameUrl || '#'} 
-        target={gameUrl ? '_blank' : undefined}
-        rel={gameUrl ? 'noopener noreferrer' : undefined}
-        onClick={e => !gameUrl && e.preventDefault()}
+      <a
+        className={styles.playButton}
+        href={gameUrl ?? '#'}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Play Game
       </a>
