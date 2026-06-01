@@ -263,13 +263,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `In the first version of the game, the car body was positioned on the roof of the car and exceeded it in area, which caused players to often encounter car rollovers on turns. I took this into account when creating the car model and positioned the wheels at a greater distance from each other, thus creating additional stability.`
             ],
-          },
-          {
-            title: 'Results',
-            text: [
-              `The project helped improve level design skills and work in Blender, as well as gain experience in creating racing games.`
-            ],
-            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -295,7 +288,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
               `Testing of the first versions showed that players found it very difficult to control the character in invisible form. To fix this situation, I created a surface that, when stepped on, leaves traces and makes a different sound.`,
               `Such surfaces serve an auxiliary function and are located in places where the player needs to control an invisible character.`
             ],
-            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -635,13 +627,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `В первой версии игры, кузов автомобиля располагался на крыше автомобиля и превосходил его по площади, из-за чего игроки часто сталкивались с опрокидыванием машины на поворотах. Я учел этот момент при создании модели автомобиля и расположил колеса большем удалении друг от друга, создав таким образом дополнительную устойчивость.`
             ],
-          },
-          {
-            title: 'Результаты',
-            text: [
-              `Проект помог улучшить навыки дизайна уровней и работы в Blender, а также получить опыт создания игр в жанре гонок.`
-            ],
-            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },
@@ -667,7 +652,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
               `Тестирование первых версий показало, что игрокам очень сложно управлять персонажем в невидимой форме. Чтобы исправить ситуацию, я создал поверхность, наступая на которую персонаж оставляет следы, и издает отличающийся звук.`,
               `Такие поверхности выполняют вспомогательную функцию и расположены в местах, где игроку необходимо управлять невидимым персонажем.`
             ],
-            gif: 'https://player.vimeo.com/video/423380063?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0'
           }
         ]
       },

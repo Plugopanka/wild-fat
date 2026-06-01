@@ -3,12 +3,13 @@
 import cubeVideoSrc from '../../../assets/videos/cube.mp4';
 import heartllVideoSrc from '../../../assets/videos/ah2.mp4';
 import heartVideoSrc from '../../../assets/videos/ah1.mp4';
+import CalderaImg from '../../../assets/images/Caldera.jpg';
 import darkDeliveryImg from '../../../assets/images/dark_delivery.jpg';
 
 // Маппинг изображений для карточек
 export const cardImages: Record<string, string> = {
   'Dark-Delivery': darkDeliveryImg,
-  'Caldera': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631f972574477d53d6375cad_ScreenShot00016.png',
+  'Caldera': CalderaImg,
   'Ground-From-Under-The-Feet': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/631fa8f72fd029a03c0df386_ScreenShot00003.png',
   'Phone-Rage': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/61e873180b37a881ff27aa2a_photo_2021-01-07_01-29-21.jpg',
   'Helicopter-HUD': 'https://cdn.prod.website-files.com/5e42e03812bfc67a8b847258/62292e9579912485fd76b398_Screenshot%202022-03-10%20at%2001.41%201.png',

@@ -25,7 +25,7 @@ const WorkDetails: React.FC = () => {
   const gameUrls: Record<string, string> = {
     'Dark-Delivery': 'https://untero.itch.io/dark-delivery',
     'Caldera': 'https://wild-fat.itch.io/caldera',
-    'Ground-From-Under-The-Feet': 'https://ldjam.com/events/ludum-dare/50/fallen-platforms-but-not-today',
+    'Ground-From-Under-The-Feet': 'https://wild-fat.itch.io/groundfromunderfeet',
     'Phone-Rage': 'https://wild-fat.itch.io/phone-rage',
     'Eggs-Delivery': 'https://wild-fat.itch.io/eggs-delivery',
     'Before-I-Disappear': 'https://wild-fat.itch.io/before-i-disappear',
