@@ -22,8 +22,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     about: {
       title: 'About',
       description: [
-        `I'm a Senior Technical Designer with 6+ years in game development. Currently at Mundfish, working on The Cube. A PvPvE FPS. Before that shipped Atomic Heart on PC, PlayStation and Xbox.`, 
-        `I work in C++ and Unreal Engine. Mostly on gameplay systems, vehicle physics, character mechanics and networking. Also spent a few years deep in UI systems before moving fully into gameplay.`
+        [{ text: "I'm a Senior Technical Designer with 6+ years in game development. Currently at Mundfish, working on a PvPvE FPS " }, { text: "The Cube", url: "https://store.steampowered.com/app/3230430/The_CUBE/" }, { text: ". Before that shipped " }, { text: "Atomic Heart", url: "https://store.steampowered.com/app/668580/Atomic_Heart/" }, { text: " on PC, PlayStation and Xbox." }],
+        [{ text: "I work in C++ and Unreal Engine. Mostly on gameplay systems, vehicle physics, character mechanics and networking. Also spent a few years deep in UI systems before moving fully into gameplay." }]
       ],
       skills: [
         'Technical Design',
@@ -412,10 +412,10 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     about: {
       title: 'О себе',
       description: [
-        `Я работаю в игровой разработке последние 5 лет в различных ролях, таких как Game Designer, Technical Designer, UX Programmer, Gameplay Programmer. В настоящее время я работаю Technical Game Designer в Mundfish над проектом Atomic Heart.`,
-        `У меня также есть опыт работы в качестве UX/UI Designer, что крайне полезно в моей повседневной работе.`,
-        `Мои любимые инструменты - Unreal Engine и Visual Studio / Rider, но я также знаком с другими популярными движками, такими как Unity и Godot.`,
-        `В свободное время я люблю путешествовать на мотоцикле, ходить в спортзал и участвовать в игровых джемах.`
+        [{ text: `Я работаю в игровой разработке последние 5 лет в различных ролях, таких как Game Designer, Technical Designer, UX Programmer, Gameplay Programmer. В настоящее время я работаю Technical Game Designer в Mundfish над проектом Atomic Heart.` }],
+        [{ text: `У меня также есть опыт работы в качестве UX/UI Designer, что крайне полезно в моей повседневной работе.` }],
+        [{ text: `Мои любимые инструменты - Unreal Engine и Visual Studio / Rider, но я также знаком с другими популярными движками, такими как Unity и Godot.` }],
+        [{ text: `В свободное время я люблю путешествовать на мотоцикле, ходить в спортзал и участвовать в игровых джемах.` }]
       ],
       skills: [
         'Игровой дизайн',

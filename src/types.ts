@@ -2,6 +2,8 @@
 
 export type Language = 'en' | 'ru';
 
+export type AboutSegment = { text: string } | { text: string; url: string };
+
 // Типы для локализации
 export interface LocalizationTexts {
   // Header
@@ -26,7 +28,7 @@ export interface LocalizationTexts {
   // About page
   about: {
     title: string;
-    description: string[];
+    description: AboutSegment[][];
     skills: string[];
     contactText: string;
     contactTextEnd: string;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocalization } from '../../../contexts/LocalizationContext';
+import { AboutSegment } from '../../../types';
 import styles from './AboutText.module.scss';
 
 const AboutText: React.FC = () => {
@@ -7,9 +8,19 @@ const AboutText: React.FC = () => {
 
   return (
     <ul className={styles.aboutList}>
-      {t.about.description.map((item, index) => (
+      {t.about.description.map((segments, index) => (
         <li key={index}>
-          <p className={styles.infoText}>{item}</p>
+          <p className={styles.infoText}>
+            {segments.map((seg: AboutSegment, i: number) =>
+              'url' in seg ? (
+                <a key={i} href={seg.url} target="_blank" rel="noopener noreferrer">
+                  {seg.text}
+                </a>
+              ) : (
+                <React.Fragment key={i}>{seg.text}</React.Fragment>
+              )
+            )}
+          </p>
         </li>
       ))}
       <li>
