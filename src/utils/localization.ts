@@ -161,13 +161,13 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: [
           `Selected systems I designed and implemented:`,
-          `Vehicle System`,
-          `Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction.`,
-          `Full pipeline from design to implementation.`,
-          `Pet Character`,
-          `Procedural locomotion built from scratch, combat ability set on GAS, puzzle interaction, entity hooks.`,
-          `Shooting Range`,
-          `Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`,
+          `Vehicle System
+          Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction.
+          Full pipeline from design to implementation.`,
+          `Pet Character
+          Procedural locomotion built from scratch, combat ability set on GAS, puzzle interaction, entity hooks.`,
+          `Shooting Range
+          Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`,
           `Full materials available during interview call under NDA.`
           ],
         params: ['Engine: Unreal Engine 5', 'Role: Senior Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
