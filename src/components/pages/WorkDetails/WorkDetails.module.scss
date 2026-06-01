@@ -47,8 +47,54 @@
 }
 
 .description {
-  white-space: pre-wrap;
-  line-height: 1.6;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 2560px) {
+  .description {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-bottom: 1.7rem;
+  }
+}
+
+// Планшеты (768px - 1024px)
+@media (max-width: 1024px) and (min-width: 769px) {
+  .description {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    margin-bottom: 1.4rem;
+  }
+}
+
+// Мобильные устройства (до 768px)
+@media (max-width: 768px) {
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+}
+
+// Маленькие мобильные устройства (до 480px)
+@media (max-width: 480px) {
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+// Очень маленькие экраны (до 360px)
+@media (max-width: 360px) {
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
+  }
 }
 
 // Планшеты (768px - 1024px)
