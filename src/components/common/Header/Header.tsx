@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           </a>
           <a
             className={styles.button}
-            href="https://drive.google.com/uc?export=download&id=1isdGjzb0UeR6O1gN8OpBdR58Pv0AXiWk"
+            href="https://drive.google.com/uc?export=download&id=1jd-wye_YL6VpFNhl_rxxuMhfBaclY5BH" 
             download
             rel="noopener noreferrer"
           >
@@ -81,8 +81,8 @@ const Header: React.FC = () => {
               LinkedIn
             </a>
             <a
-              className={styles.mobileLink}
-              href="https://drive.google.com/uc?export=download&id=1isdGjzb0UeR6O1gN8OpBdR58Pv0AXiWk"
+              className={styles.mobileLink} 
+              href="https://drive.google.com/uc?export=download&id=1jd-wye_YL6VpFNhl_rxxuMhfBaclY5BH" 
               download
               rel="noopener noreferrer"
               onClick={toggleMenu}
