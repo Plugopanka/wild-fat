@@ -134,22 +134,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         description: `Game concept developed by me at Ludum Dare 46 - Take It Alive in 10 hours. The player's goal is to deliver the maximum number of egg boxes to the finish line within a limited time. The project's goal was to improve rapid prototyping skills. During development, I studied the features of Wheeled Vehicle and Spline Component. I also improved my level design skills and work in Blender.`
       },
       {
-        id: 'Before-I-Disappear',
-        title: '3D PLATFORMER',
-        cardName: 'Before I Disappear',
-        labels: ['Game Design', 'Programming', 'Level Design', 'Modeling', 'VFX'],
-        params: ['Engine: UE4', 'Platform: HTML', 'Crew: 1', 'Genre: 3D Platformer'],
-        description: `The game was developed by me for Weekly Game Jam 146 - theme "Invisible". The player controls a character whose visible shell begins to disappear as soon as he leaves the starting platform. The player must bring the character to the next checkpoint, overcoming obstacles and solving puzzles. The player's task is complicated by the character's decreasing visibility over time, forcing him to move faster. When visibility is completely lost, the player can still control the character, but control becomes significantly more difficult. During the project, I improved my level design skills and visual effects creation skills.`
-      },
-      {
-        id: 'Darkest-Path',
-        title: '3D PLATFORMER',
-        cardName: 'Darkest Path',
-        labels: ['Game Design', 'Programming', 'Level Design', 'VFX'],
-        params: ['Engine: UE4', 'Platform: HTML', 'Crew: 1', 'Genre: 3D Platformer'],
-        description: `The game was developed by me for Weekly Game Jam 144 - theme "In the dark". The player's task is to overcome the dark path. The difficulty lies in the many obstacles and limited visibility area. During development, I consolidated my knowledge of working with materials and delved deeper into level design and difficulty balance.`
-      },
-      {
         id: 'death-mortal-conference',
         title: 'ENDLESS RUNNER',
         cardName: 'Death Mortal Conference',
@@ -541,22 +525,6 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Дизайн уровней', 'Моделирование', 'Игровой дизайн', 'Программирование', 'UX/UI'],
         params: ['Движок: UE4', 'Платформа: HTML', 'Команда: 1', 'Жанр: Гонки'],
         description: `Концепт игры был разработан мной на гейм джеме Ludum Dare 46 - Take It Alive за 10 часов. Цель игрока - довести до финиша максимальное количество коробок с яйцами за ограниченное время. Целью проекта было улучшить навыки быстрого прототипирования. За время разработки проекта я изучил особенности работы Wheeled Vehicle и Spline Component. Также улучшил навыки дизайна уровней и работы в Blender.`
-      },
-      {
-        id: 'Before-I-Disappear',
-        title: '3D PLATFORMER',
-        cardName: 'Before I Disappear',
-        labels: ['Дизайн уровней', 'Моделирование', 'Игровой дизайн', 'Программирование', 'VFX'],
-        params: ['Движок: UE4', 'Платформа: HTML', 'Команда: 1', 'Жанр: 3D платформер'],
-        description: `Игра была разработана мной на Weekly Game Jam 146 - тема "Invisible". Игрок управляет персонажем, видимая оболочка которого начинает убывать как только он сходит со стартовой площадки. Игроку необходимо довести персонажа до следующей контрольной точки, попутно преодолевая препятствия и решая головоломки. Задачу игрока усложняет убывающая со временем видимость персонажа, что заставляет его двигаться быстрее. При полной утрате видимости, игрок способен и дальше управлять персонажем, но контроль становится значительнее сложнее. За время работы над проектом я улучшил навыки дизайна уровней и навыки создания визуальных эффектов.`
-      },
-      {
-        id: 'Darkest-Path',
-        title: '3D PLATFORMER',
-        cardName: 'Darkest Path',
-        labels: ['Дизайн уровней', 'Игровой дизайн', 'Программирование', 'VFX'],
-        params: ['Движок: UE4', 'Платформа: HTML', 'Команда: 1', 'Жанр: 3D платформер'],
-        description: `Игра была разработана мной на Weekly Game Jam 144 - тема "In the dark". Задача игрока - преодолеть темный путь. Сложность задачи состоит в том, что на пути расположено множество препятствий, а область видимости ограничена одной клеткой в непосредственной близости от персонажа. За время разработки проекта я закрепил свои знания в работе с материалами, углубился в проектирование уровней и баланс сложности.`
       },
       {
         id: 'death-mortal-conference',
