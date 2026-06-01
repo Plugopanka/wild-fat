@@ -34,6 +34,10 @@
   margin: 0;
 }
 
+.params .description {
+  font-weight: 700;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -53,71 +57,38 @@
   font-weight: 400;
 }
 
+// 4K (≥ 2560px)
 @media (min-width: 2560px) {
   .description {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 2;
     margin-bottom: 1.7rem;
   }
 }
 
-// Планшеты (768px - 1024px)
-@media (max-width: 1024px) and (min-width: 769px) {
-  .description {
-    font-size: 1.15rem;
-    line-height: 1.75;
-    margin-bottom: 1.4rem;
-  }
-}
-
-// Мобильные устройства (до 768px)
-@media (max-width: 768px) {
-  .description {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1.25rem;
-  }
-}
-
-// Маленькие мобильные устройства (до 480px)
-@media (max-width: 480px) {
-  .description {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-}
-
-// Очень маленькие экраны (до 360px)
-@media (max-width: 360px) {
-  .description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 0.9rem;
-  }
-}
-
-// Планшеты (768px - 1024px)
+// Планшеты (769px - 1024px)
 @media (max-width: 1024px) and (min-width: 769px) {
   .page {
     max-width: 95%;
     margin: 25px auto;
   }
-  
+
   .layout {
     gap: 20px;
   }
-  
+
   .title {
     font-size: 1.6rem;
   }
-  
+
   .description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    margin-bottom: 1.4rem;
   }
 }
 
-// Мобильные устройства (до 768px)
+// Мобильные устройства (≤ 768px)
 @media (max-width: 768px) {
   .page {
     max-width: 90%;
@@ -125,40 +96,41 @@
     margin: 20px auto;
     padding: 0 1rem;
   }
-  
+
   .layout {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .media {
     gap: 12px;
   }
-  
+
   .info {
     gap: 12px;
   }
-  
+
   .title {
     font-size: 1.4rem;
     text-align: center;
   }
-  
+
   .description {
     font-size: 0.9rem;
     line-height: 1.5;
+    margin-bottom: 1.25rem;
   }
-  
+
   .video {
     border-radius: 4px;
   }
-  
+
   .image {
     border-radius: 4px;
   }
 }
 
-// Маленькие мобильные устройства (до 480px)
+// Маленькие мобильные устройства (≤ 480px)
 @media (max-width: 480px) {
   .page {
     max-width: 90%;
@@ -166,36 +138,45 @@
     margin: 15px auto;
     padding: 0 0.75rem;
   }
-  
+
   .layout {
     gap: 12px;
   }
-  
+
   .media {
     gap: 10px;
   }
-  
+
   .info {
     gap: 10px;
   }
-  
+
   .title {
     font-size: 1.2rem;
   }
-  
+
   .description {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+}
+
+// Очень маленькие экраны (≤ 360px)
+@media (max-width: 360px) {
+  .description {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
   }
 }
 
 // Поддержка тач-действий
 @media (hover: none) and (pointer: coarse) {
   .video {
-    // Улучшаем взаимодействие с видео на тач-устройствах
     cursor: pointer;
   }
-  
+
   .image {
     cursor: pointer;
   }
