@@ -22,8 +22,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
     about: {
       title: 'About',
       description: [
-        `Hi, I’m Artem! I’m a Game developer with over 8 years of experience. I have a strong passion for creating immersive and innovative experiences and games through the use of Unreal Engine.`,
-        `I’m currently a Technical Game Designer at Mundfish, working on The Cube and focused on Networking, GAS, Physics, Math, UX and Gameplay Systems. I've also participated in the Atomic Heart release for PC/Console platforms (Steam, PlayStation Store, Xbox).`
+        `I'm a Senior Technical Designer with 6+ years in game development. Currently at Mundfish, working on The Cube. A PvPvE FPS. Before that shipped Atomic Heart on PC, PlayStation and Xbox.`, 
+        `I work in C++ and Unreal Engine. Mostly on gameplay systems, vehicle physics, character mechanics and networking. Also spent a few years deep in UI systems before moving fully into gameplay.`
       ],
       skills: [
         'Technical Design',

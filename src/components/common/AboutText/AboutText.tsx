@@ -14,8 +14,7 @@ const AboutText: React.FC = () => {
       ))}
       <li>
         <p className={styles.infoText}>
-          {t.about.contactText}{' '}
-          <a href={`mailto:artem.vod@gmail.com`}>artem.vod@gmail.com</a> {t.about.contactTextEnd}
+          <a href={`mailto:artem.vod@gmail.com`}>artem.vod@gmail.com</a>
         </p>
       </li>
     </ul>
