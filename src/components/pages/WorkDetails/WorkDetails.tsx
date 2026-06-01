@@ -55,7 +55,7 @@ const WorkDetails: React.FC = () => {
           {work.params && (
             <ul className={styles.params}>
               {work.params.map((p, i) => (
-                <li key={i} className={styles.description}>{p}</li>
+                <li key={i} className={styles.paramItem}>{p}</li>
               ))}
             </ul>
           )}

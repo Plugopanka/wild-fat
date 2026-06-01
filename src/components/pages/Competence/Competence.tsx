@@ -33,7 +33,7 @@ const Competence: React.FC = () => {
           {competence.params && (
             <ul className={styles.params}>
               {competence.params.map((p, i) => (
-                <li key={i} className={styles.description}>{p}</li>
+                <li key={i} className={styles.paramItem}>{p}</li>
               ))}
             </ul>
           )}
