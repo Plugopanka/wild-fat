@@ -227,7 +227,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `Upgrade System with runtime stat and attachment slot modification. Both data-driven, both hooked into save.`
             ],
-            gif: 'https://player.vimeo.com/video/1198730746?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
+            gif: 'https://player.vimeo.com/video/1198766053?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
             title: 'SKILL PROGRESSION SYSTEM',
