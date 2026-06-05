@@ -213,6 +213,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`
             ],
+            gif: 'https://player.vimeo.com/video/1198893386?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
         ],
       },
