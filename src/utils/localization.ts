@@ -184,12 +184,8 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: [
           `Shipped on PC, PS4/5 and Xbox in February 2023.`,
-          `My work covered the weapon progression pipeline end to end:`,
-          `crafting system for weapons and consumables, upgrade system with runtime stat and attachment slot modification. Both data-driven, both hooked into save.`,
-          `Player-facing systems included the HUD, reading live from gameplay data with no polling, and a full Inventory with grid placement, 3D item inspection and cross-container transfers.`,
-          `Also designed and coded the Skill Progression system, with a custom in-editor tool so designers could build skill graphs and set unlock conditions without touching code.`,
-          `On the platform side, I implemented Enhanced Input across the full game UI for all three platforms. One abstraction layer, runtime device switching, full rebinding support. Dynamic input prompts in the HUD and control hints across all UI windows all fed from the same system.`,
-          `Screenshots and gameplay footage are publicly available on Steam and the official Mundfish channels.`],
+          `Screenshots and gameplay footage are publicly available on Steam and the official Mundfish channels.`,
+          `Selected systems I designed and implemented:`],
         params: ['Engine: Unreal Engine 4', 'Role: Senior Technical Designer', 'Duration: 3+ years', 'Status: Released'],
         backgroundImage: heartImage,
         youtubeUrl: 'https://www.youtube.com/embed/VbIc2_FwReE'
@@ -200,13 +196,13 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
         id: 'the-cube',
         articles: [
           {
-            title: 'Vehicle System',
+            title: 'Vehicles',
             text: [
               `Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction. Full pipeline from design to implementation.`
             ],
           },
           {
-            title: 'Pet Character',
+            title: 'Companion Character',
             text: [
               `Procedural locomotion built from scratch, combat ability set on GAS, puzzle interaction, entity hooks.`
             ],
@@ -217,6 +213,39 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
               `Lobby space with weapon modification and shooting challenges. Server-side leaderboard, weekly and daily reward integration.`
             ],
           },
+        ],
+      },
+      {
+        id: 'atomic-heart-2',
+        articles: []
+      },
+      {
+        id: 'atomic-heart',
+        articles: [
+          {
+            title: 'CRAFTING SYSTEM FOR WEAPONS AND CONSUMABLES',
+            text: [
+              `Upgrade System with runtime stat and attachment slot modification. Both data-driven, both hooked into save.`
+            ],
+          },
+          {
+            title: 'SKILL PROGRESSION SYSTEM',
+            text: [
+              `Supported with a custom in-editor tool so designers could build skill graphs and set unlock conditions without touching code.`
+            ],
+          },
+          {
+            title: 'HUD & INVENTORY SYSTEM',
+            text: [
+              `Reading live from gameplay data with no polling, and a full Inventory with grid placement, 3D item inspection and cross-container transfers.`
+            ],
+          },
+          {
+            title: 'ENHANCED INPUT',
+            text: [
+              `I implemented the system support across the full game UI for all platforms game was released. One abstraction layer, runtime device switching, full rebinding support. Dynamic input prompts in the HUD and control hints across all UI windows all fed from the same system.`
+            ]
+          }
         ],
       },
       {
