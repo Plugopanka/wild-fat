@@ -200,6 +200,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction. Full pipeline from design to implementation.`
             ],
+            gif: 'https://player.vimeo.com/video/1198782714?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
             title: 'Companion Character',
