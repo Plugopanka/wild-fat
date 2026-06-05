@@ -234,7 +234,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             text: [
               `Supported with a custom in-editor tool so designers could build skill graphs and set unlock conditions without touching code.`
             ],
-            gif: 'https://player.vimeo.com/video/1198744410?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
+            gif: 'https://player.vimeo.com/video/1198769494?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
             title: 'HUD & INVENTORY SYSTEM',
