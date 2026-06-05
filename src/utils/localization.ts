@@ -157,7 +157,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       {
         id: 'the-cube',
         title: 'THE CUBE',
-        name: 'The Cube Project',
+        name: 'The Cube',
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: [
           `Selected systems I designed and implemented:`,
@@ -173,7 +173,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       {
         id: 'atomic-heart-2',
         title: 'ATOMIC HEART II',
-        name: 'Atomic Heart II Development',
+        name: 'ATOMIC HEART II',
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: ['Contributed to the development of Atomic Heart II as a Technical Game Designer. Focused on gameplay systems, technical implementation, and optimization.'],
         params: ['Engine: Unreal Engine 5', 'Role: Senior Technical Designer', 'Duration: 2+ years', 'Status: In Development'],
@@ -183,7 +183,7 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       {
         id: 'atomic-heart',
         title: 'ATOMIC HEART',
-        name: 'Atomic Heart Project',
+        name: 'ATOMIC HEART',
         labels: ['Technical Design', 'Systems Design', 'Gameplay Programming'],
         description: [
           `Shipped on PC, PS4/5 and Xbox in February 2023.`,
@@ -199,6 +199,17 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
       }
     ],
     cardDetailsData: [
+      {
+        id: 'the-cube',
+        articles: [
+          {
+            title: 'Vehicle System',
+            text: [
+              `Physics-based movement, AI logic, multiplayer replication, mounting/dismounting, seat switching, surroundings destruction. Full pipeline from design to implementation.`
+            ],
+          },
+        ],
+      },
       {
         id: 'Dark-Delivery',
         articles: []

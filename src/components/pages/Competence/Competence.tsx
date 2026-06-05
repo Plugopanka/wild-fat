@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import LabelList from '../../common/LabelList';
 import { useLocalization } from '../../../contexts/LocalizationContext';
+import CardDetails from '../../common/CardDetails';
 import styles from './Competence.module.scss';
 
 const Competence: React.FC = () => {
@@ -48,6 +49,7 @@ const Competence: React.FC = () => {
             ))}
           </ul>
         </div>
+        <CardDetails cardId={id || ''} />
       </div>
     </div>
   );
