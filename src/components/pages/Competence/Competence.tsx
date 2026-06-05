@@ -49,8 +49,8 @@ const Competence: React.FC = () => {
             ))}
           </ul>
         </div>
-        <CardDetails cardId={id || ''} />
       </div>
+      <CardDetails cardId={id || ''} />
     </div>
   );
 };
