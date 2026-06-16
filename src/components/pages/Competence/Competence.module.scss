@@ -35,7 +35,7 @@
 }
 
 .paramItem {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -59,7 +59,7 @@
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -68,8 +68,12 @@
 
 // 4K (≥ 2560px)
 @media (min-width: 2560px) {
+  .paramItem {
+    font-size: 1.3rem;
+  }
+
   .description {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2;
     margin-bottom: 1.7rem;
   }
@@ -87,6 +91,10 @@
 
   .title {
     font-size: 1.6rem;
+  }
+
+  .paramItem {
+    font-size: 0.9rem;
   }
 
   .description {
@@ -119,6 +127,10 @@
   .title {
     font-size: 1.4rem;
     text-align: center;
+  }
+
+  .paramItem {
+    font-size: 0.9rem;
   }
 
   .description {
@@ -159,6 +171,10 @@
     font-size: 1.2rem;
   }
 
+  .paramItem {
+    font-size: 0.8rem;
+  }
+
   .description {
     font-size: 0.8rem;
     line-height: 1.4;
@@ -168,6 +184,10 @@
 
 // Очень маленькие экраны (≤ 360px)
 @media (max-width: 360px) {
+  .paramItem {
+    font-size: 0.8rem;
+  }
+
   .description {
     font-size: 0.8rem;
     line-height: 1.5;
