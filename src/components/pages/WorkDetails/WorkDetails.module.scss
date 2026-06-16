@@ -1,3 +1,5 @@
+@use '../../../styles/cardPageShared' as shared;
+
 .page {
   max-width: 90%;
   margin: 30px auto;
@@ -34,12 +36,6 @@
   margin: 0;
 }
 
-.paramItem {
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.8;
-}
-
 .info {
   display: flex;
   flex-direction: column;
@@ -52,26 +48,8 @@
   margin: 0;
 }
 
-.description {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  white-space: pre-line;
-}
-
-// 4K (≥ 2560px)
-@media (min-width: 2560px) {
-  .paramItem {
-    font-size: 1.3rem;
-  }
-
-  .description {
-    font-size: 1.5rem;
-    line-height: 2;
-    margin-bottom: 1.7rem;
-  }
-}
+// Shared text styles: .paramItem + .description with all responsive breakpoints
+@include shared.cardPageTextStyles;
 
 // Планшеты (769px - 1024px)
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -86,16 +64,6 @@
 
   .title {
     font-size: 1.6rem;
-  }
-
-  .paramItem {
-    font-size: 0.9rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-    line-height: 1.75;
-    margin-bottom: 1.4rem;
   }
 }
 
@@ -124,16 +92,6 @@
   .title {
     font-size: 1.4rem;
     text-align: center;
-  }
-
-  .paramItem {
-    font-size: 0.9rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
   }
 
   .video {
@@ -168,29 +126,6 @@
 
   .title {
     font-size: 1.2rem;
-  }
-
-  .paramItem {
-    font-size: 0.8rem;
-  }
-
-  .description {
-    font-size: 0.8rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-  }
-}
-
-// Очень маленькие экраны (≤ 360px)
-@media (max-width: 360px) {
-  .paramItem {
-    font-size: 0.8rem;
-  }
-
-  .description {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin-bottom: 0.9rem;
   }
 }
 

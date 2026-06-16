@@ -1,0 +1,80 @@
+// Shared text styles for card detail pages (Competence + WorkDetails).
+// Use `@include cardPageTextStyles;` at the top level of a .module.scss file
+// to get .paramItem and .description with all responsive breakpoints.
+
+@mixin cardPageTextStyles {
+  // ── Base ──
+  .paramItem {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.8;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    white-space: pre-line;
+  }
+
+  // ── 4K (≥ 2560px) ──
+  @media (min-width: 2560px) {
+    .paramItem {
+      font-size: 1.3rem;
+    }
+
+    .description {
+      font-size: 1.3rem;
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  // ── Tablet (769px – 1024px) ──
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .paramItem {
+      font-size: 0.9rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  // ── Mobile (≤ 768px) ──
+  @media (max-width: 768px) {
+    .paramItem {
+      font-size: 0.9rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  // ── Small mobile (≤ 480px) ──
+  @media (max-width: 480px) {
+    .paramItem {
+      font-size: 0.8rem;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  // ── Extra small (≤ 360px) ──
+  @media (max-width: 360px) {
+    .paramItem {
+      font-size: 0.8rem;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+}
