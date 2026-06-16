@@ -239,16 +239,18 @@ export const LOCALIZATION: Record<Language, LocalizationTexts> = {
             gif: 'https://player.vimeo.com/video/1198769494?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0',
           },
           {
-            title: 'HUD & INVENTORY SYSTEM',
+            title: 'INVENTORY SYSTEM',
             text: [
-              `Reading live from gameplay data with no polling, and a full Inventory with grid placement, 3D item inspection and cross-container transfers.`
+              `Full Inventory with grid placement, 3D item inspection and cross-container transfers.`
             ],
+            gif: "https://player.vimeo.com/video/1201799419?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0",
           },
           {
-            title: 'ENHANCED INPUT',
+            title: 'HUD & ENHANCED INPUT',
             text: [
-              `I implemented the system support across the full game UI for all platforms game was released. One abstraction layer, runtime device switching, full rebinding support. Dynamic input prompts in the HUD and control hints across all UI windows all fed from the same system.`
-            ]
+              `Event-driven HUD architecture powered by delegates to eliminate performance-heavy polling. Built a unified, multiplatform input system using Enhanced Input for both gameplay and UI. One abstraction layer, runtime device switching, full rebinding support. Dynamic input prompts in the HUD and control hints across all UI windows all fed from the same system.`
+            ],
+            gif: "https://player.vimeo.com/video/1201784972?title=0&byline=0&portrait=0&autoplay=1&background=1&loop=1&muted=1&autopause=0",
           }
         ],
       },
